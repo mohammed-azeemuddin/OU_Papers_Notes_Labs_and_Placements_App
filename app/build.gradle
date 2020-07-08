@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+
+//-----------------LOOOKKKK HEEEREEE , UNCOMMENT THIS FOR ADS------\\
+// apply plugin: 'com.google.gms.google-services'
+
+android {
+
+    /*
+    signingConfigs {
+        config {
+            keyAlias 'hamed'
+            keyPassword ''
+            storeFile file('C:\\Users\\MJCET\\AndroidStudioProjects\\signature_ou.jks')
+            storePassword ''
+        }
+    }
+    */
+
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+
+    defaultConfig {
+        applicationId "com.azeem.ou_app2"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 7
+        versionName "6.0.1"
+        // signingConfig signingConfigs.config
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        sourceSets {
+            main {
+                res {
+                    srcDirs 'src/main/res', 'src/main/res/MainScreenXMLFiles', 'src/main/res/layout/MainScreenXMLFiles', 'src/main/res/layout/PdfEverything', 'src/main/res/layout/RecyclerViewXMLFiles', 'src/main/res/layouts/MainScreenXML'
+                }
+            }
+        }
+
+    }
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+        //cloud messaging
+        implementation 'com.google.firebase:firebase-messaging:20.2.1'
+
+        implementation 'androidx.appcompat:appcompat:1.0.2'
+        implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+        testImplementation 'junit:junit:4.12'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+        implementation 'pl.droidsonroids.gif:android-gif-drawable:1.1.17'
+
+        //recycler view
+        implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+        //pdf_viewer
+        implementation 'es.voghdev.pdfviewpager:library:1.0.3'
+
+        //circle image_view
+        implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+        //volley for json data fetching
+        implementation 'com.android.volley:volley:1.1.1'
+
+        //parceler for parecelable interface
+        implementation 'org.parceler:parceler-api:1.1.12'
+        annotationProcessor 'org.parceler:parceler:1.1.12'
+
+        // Admob ----------- uncomment this too
+        // implementation 'com.google.android.gms:play-services-ads:19.1.0'
+
+        implementation 'com.google.android.material:material:1.0.0'
+
+        implementation 'org.sufficientlysecure:html-textview:3.2'
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:+'
+    implementation 'androidx.constraintlayout:constraintlayout:+'
+    implementation 'com.google.firebase:firebase-messaging:20.1.4'
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+    implementation 'com.google.firebase:firebase-database:19.3.1'
+}

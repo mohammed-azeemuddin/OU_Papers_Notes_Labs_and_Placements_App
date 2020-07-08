@@ -1,0 +1,686 @@
+<html>
+<body>
+
+<div class="onlycontent">
+
+<hr>
+<h2 class="h2">Infosys Technical Interview Questions</h2>
+<hr>
+
+<h3 class="h3">1) What is polymorphism?</h3>
+<p>Polymorphism is a concept by which we can perform a single action in different ways. Polymorphism is derived from two Greek words: poly and morphs. The word "poly" means many and "morphs" means forms. So polymorphism means many forms. </p>
+<hr>
+
+<h3 class="h3">2) Explain the functionality of linked list.</h3>
+<p>A linked list consists of two parts. Information part and the link part. In the single linked list, first node of the list is marked by a unique pointer named as start and this pointer points to the first element of the list, and the link part of each node consists of a pointer pointing to the next node, but the last node of the list has null pointer identifying the last node. The linked list can be traversed easily with the help of Start pointer.  </p>
+<hr>
+
+<h3 class="h3">3) What is normalization of databases, joins, and keys?</h3>
+<p>Normalization is also known as the process of organizing data in a DBMS efficiently without any loss of data. </p>
+<p><strong>Advantages of the normalization process are as follows: </strong></p>
+<p>First is eliminating redundant data and ensuring data dependencies make sense. It reduces the amount of space that the database consumes and ensure that data is logically stored.</p>
+<p><strong>Join:</strong></p>
+<p>This clause is used in DBMS to combine rows from two or more tables, based on a related column between them.</p>
+<p><strong>Keys:</strong></p>
+<p>Keys are a crucial part of the relational database model. They are used to identify and establish relationships between tables. They are also used to uniquely determine each record or row of data in a table.</p>
+<p><strong>Key:</strong></p>
+<p>A Key can be a single attribute or a group of attributes acting as a key.</p>
+<hr>
+
+<h3 class="h3">4) What is inheritance?</h3>
+<p>In, object-oriented programming, inheritance is a mechanism based on classes.</p>
+<p>Inheritance refers to inheriting the data members and properties of a parent class to a child class. A class which is derived from another class is often called as a sub-class, and the class from which the child class is derived is known as super-class or parent class.</p>
+<hr>
+
+<h3 class="h3">5) What are the different types of inheritance?</h3>
+<p><strong>Types of Inheritance:</strong></p>
+<ul class="points">
+<li>Single inheritance</li>
+<li>Multiple Inheritance</li>
+<li>Multi-level Inheritance</li>
+<li>Multi-path Inheritance</li>
+<li>Hierarchical Inheritance</li>
+<li>Hybrid Inheritance</li>
+</ul>
+<hr>
+
+<h3 class="h3">6) Demonstrate the process of inheriting variable of one class to other class?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="comment">//Base&nbsp;Class</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">class</span><span>&nbsp;A&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;&nbsp;</span></li><li class=""><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">int</span><span>&nbsp;a;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//Derived&nbsp;Class</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">class</span><span>&nbsp;B&nbsp;:&nbsp;A&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>a=<span class="number">15</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" style="display: none;">//Base Class
+class A 
+{ 
+public int a;
+
+}
+//Derived Class
+class B : A
+{
+a=15;
+
+}
+</textarea></div>
+<hr>
+
+<h3 class="h3">7) What are the loops statements?</h3>
+<p>To execute a block of statement several times in a program depending upon the conditional statement loops are used.</p>
+<img src="https://static.javatpoint.com/interview/images/infosys-interview-questions2.png" alt="Infosys Interview Questions">
+<p>The basic structure of a loop is given above in the diagram. For each successful execution of the loop, the conditional statement should be checked. If the conditional statement is true, then the loop will be executed. If the conditional statement is false, then the loop will be terminated.</p>
+<hr>
+
+<h3 class="h3">8) Difference between classes and interface?</h3>
+<p>The difference between classes and interface are listed below:</p>
+<ul class="points">
+<li>The instance of the class can be created by creating its object, whereas interfaces cannot be instantiated as all the methods in the interface are abstract and do not perform any action, There is no need for instantiating an interface.</li>
+<li>A class is declared using class keyword whereas an interface is declared using interface keyword.</li>
+<li>The members of the class can have access specifier such as public, protected, and private but members of the interface cannot have the access specifier, all the members of the interface is declared as public because the interface is used to derive another class. There will be no use of access specifies inside the members of an interface.</li>
+<li>The methods inside the class are defined to perform some actions on the fields declared in the class whereas interface lacks in declaring in fields, the methods in an interface are purely abstract.</li>
+<li>A class can implement any number of the interface but can only extend one superclass, whereas interface can extend any number of interfaces but cannot implement any interface.</li>
+<li> A class can have a constructor defined inside the class to declare the fields inside the class, whereas interface doesn't have any constructor defined because there are no fields to be initialized.</li>
+</ul>
+<hr>
+
+<h3 class="h3">9) What is software development life-cycle? Also, explain the waterfall model.</h3>
+<p>SDLC is a process followed for developing and enhancing software project. It consists of a detailed plan for developing, maintaining a specific software. The life cycle defines a methodology process for improving the quality of software and the overall development process.</p>
+<p>In "The Waterfall" model, the whole process of software development is divided into separate phases. In this Waterfall model, typically, the outcome of one phase acts as the input for the next phase sequentially.</p>
+<hr>
+
+<h3 class="h3">10) What are the four basic principles of OOPS?</h3>
+<p>The four basic principles of Object-Oriented Programming System are listed below:</p>
+<ol class="points">
+<li>Abstraction</li>
+<li>Inheritance</li>
+<li>Encapsulation</li>
+<li>Polymorphism.</li>
+</ol>
+<hr>
+
+<h3 class="h3">11) What are the conditional statements?</h3>
+<p>The conditional statements can alternatively be called a conditional expression also. Conditional statements are the set of rules which were executed if a particular condition is true. It is often referred to an if-then statement because if the condition is true, then the statement is executed.</p>
+<hr>
+
+<h3 class="h3">12) What is Database Management System?</h3>
+<p>A Database Management System is a software system is used for creating and managing databases. DBMS make it possible for the end user to create and maintain databases. DBMS provides an interface between the end user/application and the databases.</p>
+<hr>
+
+<h3 class="h3">13) List different advantages of DBMS.</h3>
+<p>Improved data sharing.</p>
+<p>The list of several advantages of Database Management System:</p>
+<ul class="points">
+<li>Improved data security.</li>
+<li>Better data integration.</li>
+<li>Minimized data inconsistency.</li>
+<li>Improved data access.</li>
+<li>Improved decision making.</li>
+<li>Increased end-user productivity.</li>
+</ul>
+<hr>
+
+<h3 class="h3">14) What do you mean by Object-Relational DBMS?</h3>
+<p>The object-relational database (ORD) is a database management system (DBMS) that are composed of both an object-oriented database (OODBMS) and a relational database (RDBMS). ORD supports the essential components of an object-oriented database model in its schemas and the query language used, such as inheritance, classes, and objects. </p>
+<p>An object-relational database is also known as an object-relational database management systems (ORDBMS).</p>
+<hr>
+
+<h3 class="h3">15) What is database Schema?</h3>
+<p>It is a set of formulas (sentences) called integrity constraints imposed on a database.</p>
+<hr>
+
+<h3 class="h3">16) What is an IC? What is its importance?</h3>
+<p>IC refers to integrated circuits sets of electronic circuits on single flat piece semiconductor material, and usually, silicon is used. The integration of a large number of tiny transistors into a small chip results in circuits that are smaller in size and faster than those discrete electronic components. The importance of integrated circuits than the separate electronic components is integrated circuits are smaller in size, faster, low costs than discrete electronic components.</p>
+<hr>
+
+<h3 class="h3">17) Write a program to check whether the input number is a perfect number or not.</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;main()Improved&nbsp;data&nbsp;sharing.&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;number,&nbsp;remainder,&nbsp;sum&nbsp;=&nbsp;0,&nbsp;i;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Enter&nbsp;a&nbsp;Number\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;scanf(<span class="string">"%d"</span><span>,&nbsp;&amp;number);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>&nbsp;(i&nbsp;=&nbsp;1;&nbsp;i&nbsp;&lt;&nbsp;number&nbsp;;&nbsp;i=i+1)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainder&nbsp;=&nbsp;number&nbsp;%&nbsp;i;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(remainder&nbsp;==&nbsp;0)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;+=&nbsp;i;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(sum&nbsp;==&nbsp;number)&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Number&nbsp;is&nbsp;perfect&nbsp;number"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Number&nbsp;is&nbsp;not&nbsp;a&nbsp;perfect&nbsp;number"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;0;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="cpp" style="display: none;">#include &lt;stdio.h&gt;
+
+int main()Improved data sharing.
+{
+    int number, remainder, sum = 0, i;
+
+    printf("Enter a Number\n");
+    scanf("%d", &amp;number);
+    for (i = 1; i &lt; number ; i=i+1)
+    {
+        remainder = number % i;
+        if (remainder == 0)
+        {
+            sum += i;
+
+        }
+    }
+    if (sum == number)
+{
+        printf("Number is perfect number");
+}
+    else
+{
+        printf("Number is not a perfect number");
+}
+    return 0;
+}
+</textarea></div>
+<hr>
+
+<h3 class="h3">18) Tell me something about DSN?</h3>
+<p>A Data Source Name as the name suggests it is the logical name for Open Database Connectivity to refer to other information that is required to access data. For a connection to an ODBC data source Microsoft SQL Server database. </p>
+<hr>
+
+<h3 class="h3">19) What is the difference between a Clustered-index and a non-clustered-index? </h3>
+<p><strong>Clustered Index</strong> - Only one per table is allowed</p>
+<p>Faster to read than non clustered because the data is physically stored in index order</p>
+<p><strong>Non-Clustered Index</strong> - Can be used many times in a table</p>
+<p>Quicker for inserting and updating operations than a clustered index</p>
+<hr>
+
+<h3 class="h3">20) Difference between C &amp; embedded C.</h3>
+<p><strong>C Language</strong></p>
+<ol class="points">
+<li>C is a type of the computer programming language. C was initially developed by Dennis Ritchie in AT&amp;T Bell Labs between 1969 and 1973. It has a free-format program source code. C is a general-purpose programming language.</li>
+<li>C is generally used for desktop computers</li>
+<li>C can use the resources of a desktop PC like memory, OS, etc.</li>
+<li>Compilers for C (ANSI C) typically generate OS dependent executables.</li>
+</ol>
+<p><strong>Embedded C</strong></p>
+<ol class="points">
+<li>Embedded C is the set of language extensions for the C Programming language. It was released by the C Standards committee. Through the Embedded C extensions, the C Standards committee hoped to address the commonality issues that exist between C extensions for different embedded systems.</li>
+<li>Embedded C is for micro-controller based applications.</li>
+<li>Embedded C is used with the limited resources, such as RAM, ROM, I/Os on an embedded processor.</li>
+<li>Embedded C requires compilers to create files to be downloaded to the micro-controllers/microprocessors where it needs to run.</li>
+</ol>
+<hr>
+
+<h3 class="h3">21) What is a pointer in C? What is its use?</h3>
+<p>The pointer is a particular variable which holds the address of another variable of the same type. Pointers can be of any data type and structure are allowed in C programming language. Pointer variable stores the address of another variable of the same data type as the value of the pointer variable.</p>
+<p><strong>Following are the uses of pointers:</strong></p>
+<ul class="points">
+<li>To point a variable in the memory.</li>
+<li>Pointers are used to traverse the linked list.</li>
+<li>To point out a structure.</li>
+</ul>
+<hr>
+
+<h3 class="h3">22) Different between a session and a socket?</h3>
+<p>The Socket is the Combination of Ip address, and Port Number and the session is a Logical Connectivity between the source and destination.</p>
+<hr>
+
+<h3 class="h3">23) What is a null pointer?</h3>
+<p>The null pointer is the pointer with no reference to any location of the memory.</p>
+<p>A null pointer contains zero as its value which means pointer is empty and not pointing to anywhere in the memory. Null pointers can be used further in the program to initialize the address of the memory location with the same data type of the pointer.</p>
+<h4 class="n">Note: Pointers can only point to the variable having the same datatype. If the data type of pointer and datatype of pointing variable is different, then the pointer will not work.</h4>
+<hr>
+
+<h3 class="h3">24) What is a Real-Time OS?</h3>
+<p>A real-time operating system is an operating system which acts as an interface between hardware and user. This system guarantees a specific capability within a specified time. For example, an operating system is designed to ensure that a specific object was available for a robot on an assembly line.</p>
+<hr>
+
+<h3 class="h3">25) Difference between TCP and UDP.</h3>
+<table class="alt">
+<tbody><tr>
+	<th>TCP</th>
+	<th>UDP</th>
+</tr>
+<tr>
+    <td>Connection-orientated protocol</td>
+    <td>Connectionless protocol</td>
+</tr>
+<tr>
+    <td>Segment sequencing.</td>
+    <td>No sequencing.</td>
+</tr>
+<tr>
+    <td>Acknowledge sequencing</td>
+    <td>No windowing and retransmission.</td>
+</tr>
+<tr>
+    <td>Reliable transmission protocol.</td>
+    <td>Unreliable transmission protocol.</td>
+</tr>
+</tbody></table>
+<hr>
+
+<h3 class="h3">26) Write a c program to swap two numbers without using a temporary variable.</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="keyword">void</span><span>&nbsp;swap(</span><span class="datatypes">int</span><span>&nbsp;&amp;i,&nbsp;</span><span class="datatypes">int</span><span>&nbsp;&amp;j)&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>i=i+j;&nbsp;&nbsp;</span></li><li class=""><span>j=i-j;&nbsp;&nbsp;</span></li><li class="alt"><span>i=i-j;&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="cpp" style="display: none;">void swap(int &amp;i, int &amp;j)
+{
+i=i+j;
+j=i-j;
+i=i-j;
+}
+</textarea></div>
+<hr>
+
+<h3 class="h3">27) Which functions are used for memory allocation in C/C++</h3>
+<p>The Function calloc() allocates a memory area, and the length will be the product of its parameters(it has two parameters). It fills the memory with ZERO's and returns a pointer to the first byte of the memory. If it fails to locate enough space, Then it returns a NULL pointer.</p>
+<p>The function malloc() allocates a memory area, and length will be the value entered as a parameter. (it has one parameter). It does not initialize memory area free() used to free the allocated memory(allocated through calloc and malloc), in other words, this used release the allocated memory new also used to allocate memory on the heap and initialize the memory using the constructor delete also used release memory allocated by new operator</p>
+<hr>
+
+<h3 class="h3">28) Write output of the program?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;i=10;&nbsp;&nbsp;</span></span></li><li class=""><span>printf(<span class="string">"%d%d%d"</span><span>,i,++i,i++);&nbsp;&nbsp;</span></span></li><li class="alt"><span>Answer&nbsp;=&nbsp;10&nbsp;12&nbsp;12&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="cpp" style="display: none;">int i=10;
+printf("%d%d%d",i,++i,i++);
+Answer = 10 12 12
+</textarea></div>
+<hr>
+
+<h3 class="h3">29) What is a virtual function and what is the pure virtual function?</h3>
+<p><strong>Virtual function:-</strong> In order to achieve polymorphism, function in base class is declared as virtual, By declare virtual we make the base class pointer to execute the function of any derived class depends on the content of pointer (any derived class address).</p>
+<p><strong>Pure Virtual Function:-</strong> This is a function used in base class, and its definition has to be provided in a derived class, In other pure virtual function has no definition in the base is defined as:</p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="keyword">virtual</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;fun()=0;&nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="cpp" style="display: none;">virtual void fun()=0;
+</textarea></div>
+<p>That means this function not going to do anything, In case of the pure virtual function derived function has to implement the pure virtual function or redeclare it as the pure virtual function</p>
+<hr>
+
+<h3 class="h3">30) What are WPF-WCF? </h3>
+<p>WPF/WCF application, need in .NET 3.0 Framework. This application will cover the following concepts:</p>
+<ul class="points">
+<li>WCF(Windows Communication Foundation)</li>
+<li>The new service orientated attributes</li>
+<li>The use of interfaces</li>
+<li>The use of callbacks</li>
+<li>Asynchronous delegates</li>
+<li>Creating the proxy</li>
+<li>WPF( Windows Presentation Foundation )</li>
+<li>Styles</li>
+<li>Templates</li>
+<li>Animations</li>
+<li>Databinding</li>
+<li>Multithreading a WPF application</li>
+</ul>
+<hr>
+
+<h3 class="h3">31) Difference between the EXE and the DLL file extension? </h3>
+<p>The term EXE is a short-term of the word executable as it identifies the file as a program. Whereas, DLL stands for Dynamic Link Library, which commonly contains functions and procedures that can be used by other programs.</p>
+<hr>
+
+<h3 class="h3">32) Scenarios in which the web application should be used and scenarios in which desktop application should be used?</h3>
+<p>Scenarios in which web application used are listed below:</p>
+<ul class="points">
+<li>Cost effective development</li>
+<li>Accessible anywhere</li>
+<li>Easily customizable</li>
+</ul>
+<p>Scenarios in which desktop application should be used are listed below:</p>
+<ul class="points">
+<li>Desktop application usually has more control.</li>
+</ul>
+<p>Safe for computationally expensive software that needs to communicate directly with the OS.</p>
+<p>The desktop application is often offline and does not need an Internet connection to function compared to a web application.</p>
+<hr>
+
+<h3 class="h3">33) What is an array?</h3>
+<p>An array is a group of elements used to store a group of related data of the same data type.</p>
+<p>The array uses index number to identify each element in an array.</p>
+<hr>
+
+<h3 class="h3">34) Inner join Vs. Outer join?</h3>
+<img src="https://static.javatpoint.com/interview/images/infosys-interview-questions3.png" alt="Infosys Interview Questions">
+<hr>
+
+<h3 class="h3">35) What are the SQL tables?</h3>
+<p>A table is a set of related data in a structured format in the database. A table is consists of rows and columns.</p>
+<hr>
+
+<h3 class="h3">36) What is the difference between array and pointer?</h3>
+<p>An array is the group of similar elements having the same data type, whereas the pointer is a variable pointing to some data type in the memory. Arrays can only contain the elements of similar data type whereas pointer variable is used to point to any data type variable.</p>
+<hr>
+
+<h3 class="h3">37) How abstraction and encapsulation complementary?</h3>
+<p>Abstraction and encapsulation are complementary because in object-oriented programming classes can only be abstracted if it is encapsulated. The abstraction focuses on the observable behavior of an object, whereas encapsulation focuses on the implementation that gives rise to this behavior.</p>
+<hr>
+
+<h3 class="h3">38) How is modularity present in C++?</h3>
+<p>Modularity is the concept explained in oops concept, and it was introduced with class and objects in c++. Functions, classes, structures implements modularity in C++.</p>
+<hr>
+
+<h3 class="h3">39) Define the structural difference between the b-tree index and bitmap?</h3>
+<p><strong>Btree</strong></p>
+<p>This tree structure was developed by Bayer and McCreight in 1972.</p>
+<p>This tree structure is a height-balanced m-way search tree. A B-tree of the order m can be defined as an m-way search tree.</p>
+<p>It is made up of branch nodes and leaf nodes. </p>
+<p><strong>Bitmap</strong></p>
+<p>It consists merely of bits for every single distinct value. It uses a string of bits to locate rows in a table quickly. Used to index low cardinality columns.</p>
+<hr>
+
+<h3 class="h3">40) What do you mean by platform independence?</h3>
+<p>The platform independence refers to the ability of programming language or a platform that you implement on one machine and use them on another machine without or minimal changes. There are two types of platform independence, source platform independence, and binary platform independence. For example, Java is a binary platform independent language whereas c and c++ are source platform independence languages because java uses java virtual machine to run their programs but c and c++ use compilers to convert the source code to executable machine language.</p>
+<hr>
+
+<h3 class="h3">41) Differentiate between Char and Varchar in DBMS?</h3>
+<p>Char and Varchar both are the datatypes in DBMS. Char and varchar both datatypes are used to store characters up to 8000. The only point of difference between the Char and Varchar is Char fixed length string datatype whereas Varchar, as the name suggests, is a variable length character storing data type.</p>
+<p><strong>For example</strong>, char(7) will take 7 bytes of memory to store the string, and it also includes space. Whereas varchar will take variable space, which means that it will only take that much of space as the actual data entered as the data of varchar data type.</p>
+<hr>
+
+<h3 class="h3">42) Do you know about the different level of languages?</h3>
+<p>The different levels of programming languages were listed below:</p>
+<ul class="points">
+<li><strong>Low-level Language</strong>- Language which is understandable by machine is often known as machine language (binary language). It is challenging to read and doing code in this language by humans directly.</li>
+<li><strong>Assembly level language</strong>- Some mnemonics are used which reduce the complexity of the program.</li>
+<li><strong>Middle-level Language</strong>- This language is not so tricky as the assembly language, but it still requires the knowledge of computer hardware which makes it little difficult to program. For Example C and C++ programming languages.</li>
+<li><strong>High-level language</strong>- Its right to say, this level of the programming language is the highest level of the programming language in the technology. These types of programming languages do not require the knowledge of the hardware. This level of the programming language is elementary to learn by the humans. For Example Java, PHP, Perl, Python, etc.</li>
+</ul>
+<hr>
+
+<h3 class="h3">43) What is the word used for the virtual machine in JAVA? How is it implemented?</h3>
+<p>The word "Java Virtual Machine known as JVM in short" is used for the virtual machine in Java. This word is implemented from the java runtime environment (JRE).</p>
+<hr>
+
+<h3 class="h3">44) List the areas in which data structures are applied extensively?</h3>
+<p>The list of areas where data structures are applied extensively are listed below:</p>
+<ul class="points">
+<li>Compiler Design</li>
+<li>Operating System</li>
+<li>Database management System</li>
+<li>Numerical analysis</li>
+<li>Artificial Intelligence</li>
+<li>Simulation</li>
+<li>Statistical analysis package</li>
+</ul>
+<hr>
+
+<h3 class="h3">45) Difference between Class and Struct.</h3>
+<p>A structure and a class differ a lot as a structure has limited functionality and features as compared to a class. A class can be defined as the collection of related variables and functions encapsulated in a single structure whereas a structure can be referred to as an user-defined datatype for processing its operations. A keyword "Struct" is used for declaration of Struct Where a keyword "class" is used for the declaration of a class in the programming language. Default access specifier of the class is private whereas default access specifier of the struct is public. The purpose of the class is data abstraction and further inheritance whereas the use of the struct is generally, Grouping of data. General usage of the struct is a small amount of data whereas general usage of the class is to store a large amount of data.</p>
+<hr>
+
+<h3 class="h3">46) What is the difference between a white box, black box, and gray box testing?</h3>
+<table class="alt">
+<tbody><tr>
+	<th>White Box Testing</th>
+	<th>Black Box Testing</th>
+	<th>Gray Box Testing</th>
+</tr>
+<tr>
+    <td>Internal programming fully known.</td>
+    <td>Internal programming is not known.</td>
+	<td>Internal programming is partially known.</td>
+</tr>
+<tr>
+	<td>Tester knows the internal working of the application.</td>
+	<td>The knowledge of the internal working of the application is not required.</td>
+	<td>Internal working of the application is partially known.</td>
+</tr>
+<tr>
+    <td>White box testing is also known as glass, open box, clear box, structural testing, or code-based testing.</td>
+    <td>Black box testing is also known as a closed box, data-driven, and functional testing.</td>
+	<td>Gray box testing is also known as translucent testing.</td>
+</tr>
+<tr>
+    <td>Performed by tester and developers.</td>
+    <td>Performed by the end user and also by tester and developers.</td>
+	<td>Performed by the end user and also by tester and developers.</td>
+</tr>
+<tr>
+    <td>The tester can design test data.</td>
+    <td>Testing is based on external expectation.</td>
+	<td>By high-level database diagrams and data flow diagrams.</td>
+</tr>
+<tr>
+    <td>Most exhaustive and time-consuming.</td>
+    <td>Least time consuming and exhaustive.</td>
+	<td>Partially time-consuming and exhaustive.</td>
+</tr>
+<tr>
+    <td>Data domain and internal boundaries can be better tested.</td>
+    <td>Performed by the trial, and error method.</td>
+	<td>Data domains and the internal boundaries can be tested if known.</td>
+</tr>
+<tr>
+    <td>Not suited for algorithm testing.</td>
+    <td>Not suited for algorithm testing.</td>
+	<td>Suited for algorithm testing.</td>
+</tr>
+</tbody></table>
+<hr>
+
+<h3 class="h3">47) Describe three levels of data abstraction? Which layer is at the user end?</h3>
+<p>The three levels of data abstraction are listed below:</p>
+<ol class="points">
+<li><strong>Physical level:</strong> This is the lowest level of database abstraction describes how the data are stored.</li> 
+<li><strong>Logical level:</strong> This level is the next higher level than the physical level of database abstraction, which represents the data stored in the database and what relationship among those data.</li>
+<li><strong>View level:</strong> This is the highest level of database abstraction describes only part of the entire database.</li>
+</ol>
+<p>No doubt, View level layer of database abstraction is at the user end.</p>
+<hr>
+
+<h3 class="h3">48) Difference between 'Macro' and 'ordinary' definition.</h3>
+<ul class="points">
+<li> Macro takes parameters whereas the ordinary definition does not.</li>
+<li>Based on the parameter values to macro, it can result in different value at runtime. Ordinary definition value remains same at all place at runtime.</li>
+<li>Macro can be used for conditional operations whereas the definition cannot.</li>
+<li>Using macro one can achieve inline functionality in C, i.e., a macro can be a function performing simple operations. This is not possible using definitions.</li>
+</ul>
+<hr>
+
+<h3 class="h3">49) Write the program in C language to swap two numbers without using a third variable.</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&lt;Stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="preprocessor">#include&lt;conio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">void</span><span>&nbsp;main()&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;i,j;&nbsp;&nbsp;</span></span></li><li class=""><span>printf(<span class="string">"Enter&nbsp;the&nbsp;value&nbsp;of&nbsp;i:&nbsp;\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>scanf(<span class="string">"%d"</span><span>,&amp;i);&nbsp;&nbsp;</span></span></li><li class=""><span>printf(<span class="string">"Enter&nbsp;the&nbsp;value&nbsp;of&nbsp;j:&nbsp;\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>scanf(<span class="string">"%d"</span><span>,&amp;j);&nbsp;&nbsp;</span></span></li><li class=""><span>printf(<span class="string">"Value&nbsp;of&nbsp;i&nbsp;before&nbsp;swap:%d&nbsp;\n"</span><span>,i);&nbsp;&nbsp;</span></span></li><li class="alt"><span>printf(<span class="string">"Value&nbsp;of&nbsp;j&nbsp;before&nbsp;swap:%d&nbsp;\n"</span><span>,j);&nbsp;&nbsp;</span></span></li><li class=""><span>i=i+j;&nbsp;&nbsp;</span></li><li class="alt"><span>j=i-j;&nbsp;&nbsp;</span></li><li class=""><span>i=i-j;&nbsp;&nbsp;</span></li><li class="alt"><span>printf(<span class="string">"Value&nbsp;of&nbsp;i&nbsp;after&nbsp;swap:%d&nbsp;\n"</span><span>,i);&nbsp;&nbsp;</span></span></li><li class=""><span>printf(<span class="string">"Value&nbsp;of&nbsp;j&nbsp;after&nbsp;swap:%d&nbsp;\n"</span><span>,j);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="cpp" style="display: none;">#include&lt;Stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+int i,j;
+printf("Enter the value of i: \n");
+scanf("%d",&amp;i);
+printf("Enter the value of j: \n");
+scanf("%d",&amp;j);
+printf("Value of i before swap:%d \n",i);
+printf("Value of j before swap:%d \n",j);
+i=i+j;
+j=i-j;
+i=i-j;
+printf("Value of i after swap:%d \n",i);
+printf("Value of j after swap:%d \n",j);
+
+}
+</textarea></div>
+<hr>
+
+<h3 class="h3">50) What are IPv4 and IPv6? Differentiate between them.</h3>
+<table class="alt">
+<tbody><tr>
+	<th>IPv4</th>
+	<th>IPv6</th>
+</tr>
+<tr>
+    <td>IPv4 contains 32 bit Ip address.</td>
+    <td>IPv6 contains 128 bit IP address.</td>
+</tr>
+<tr>
+    <td>The older version of the IP address.</td>
+    <td>The newer version of the IP address.</td>
+</tr>
+<tr>
+    <td>generates 4.29 x 10<sup>9</sup> unique network addresses</td>
+    <td>produces 3.4 x 10<sup>38</sup> addresses</td>
+</tr>
+</tbody></table>
+<hr>
+
+<h3 class="h3">51) What is the difference and similarity between C and C++?</h3>
+<p>C and C++ both use the same syntax. C++ is the extension of the C language. C and C++ both have same compilers. C++ language consists of classes and objects whereas there are no classes and objects available in the C language. C++ is an OOP based programming whereas C is not OOPS based programming language.</p>
+<hr>
+
+<h3 class="h3">52) What are the different modulation techniques?</h3>
+<p>The two types of modulation techniques are an analog and digital modulation. Further analog modulation is subdivided into amplitude, frequency and phase modulation.</p>
+<hr>
+
+<h3 class="h3">53) Differentiate between 'a' and "a."</h3>
+<p>"a" is string value whereas 'a' is a character value in c programming language.</p>
+<hr>
+
+<h3 class="h3">54) What is the pre-processor?</h3>
+<p>The pre-processor is just a text substitution tool, and they instruct the compiler to do required pre-processing before actual compilation.</p>
+<hr>
+
+<h3 class="h3">55) Write a program in c language to check whether the input number is a prime number or not.</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&lt;conio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="preprocessor">#include&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;</span></li><li class=""><span><span class="datatypes">int</span><span>&nbsp;main()&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span><span class="datatypes">int</span><span>&nbsp;num,i;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;flag=0;&nbsp;&nbsp;</span></span></li><li class=""><span>printf(<span class="string">"Enter&nbsp;the&nbsp;number:"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>printf(<span class="string">"\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>scanf(<span class="string">"%d"</span><span>,&amp;num);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>(i=2;i&lt;num;i++)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>(num%i==0)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flag++;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>(flag&gt;0)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"number&nbsp;is&nbsp;not&nbsp;a&nbsp;prime&nbsp;number\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Entered&nbsp;number&nbsp;is&nbsp;an&nbsp;prime&nbsp;number\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span><span class="keyword">return</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="cpp" style="display: none;">#include&lt;conio.h&gt;
+#include&lt;stdio.h&gt;
+ 
+int main()
+{
+int num,i;
+int flag=0;
+printf("Enter the number:");
+printf("\n");
+scanf("%d",&amp;num);
+    for(i=2;i&lt;num;i++)
+    {
+        if(num%i==0)
+        {
+        flag++;
+        }
+    }
+    if(flag&gt;0)
+    {
+    printf("number is not a prime number\n");
+    }
+    else
+    {
+    printf("Entered number is an prime number\n");
+    }
+return;
+}
+</textarea></div>
+
+<hr>
+<h2 class="h2">Infosys HR Interview Questions</h2>
+<hr>
+
+<h3 class="h3">1) What do you know about our company?</h3>
+<p>Infosys Limited is an Indian company. The headquarters are in Bengaluru, Karnataka, India. Company trade name as "Infosys Technologies Limited." This business provides consulting, information technology and outsourcing services. </p>
+<hr>
+
+<h3 class="h3">2) Introduce yourself and say something apart from your Resume.</h3>
+<p>I would like to tell you other than what is there in it. I am born and raised in Banaras city. In Banaras, there are not many good colleges to pursue B.Tech, so I came to Bengaluru for learning and understanding things. Here, in my early phase I started facing few difficulties but after some days, I was able to sort out almost every problem. I think, adaptability, quick learning and problem-solving are my positive points and coming to my weakness I am emotional kind of person, but this might be helpful in maintaining the proper relationship.</p>
+<hr>
+
+<h3 class="h3">3) Where would you like to work: software development or software testing?</h3>
+<h4 class="n">Note: Answer depending upon the choice of the person giving the interview.</h4>
+<p><strong>Example 1:</strong> I would like to work in software development.</p>
+<p><strong>Example 2:</strong> I would like to work in software testing.</p>
+<hr>
+
+<h3 class="h3">4) How do you get to know about our company?</h3>
+<h4 class="n">Note: The interviewee should not lie while answering such questions. Because an interviewer is a smart person and they can detect it if you are lying.</h4>
+<p><strong>Example:</strong> I get to know about your company from several online websites.</p>
+<hr>
+
+<h3 class="h3">5) Why have you applied at Infosys?</h3>
+<p>Infosys is the second-largest revenue earning IT Company in India. Every person wants to work for your company.</p>
+<hr>
+
+<h3 class="h3">6) Why do you think you are fit for our organization?</h3>
+<p>I am a hard working person, and my priority is to serve your organization. I can sort out almost every problem, and I think adaptability, quick learning and problem-solving are my positive points.</p>
+<hr>
+
+<h3 class="h3">7) Do you have an offer from any other organization?</h3>
+<h4 class="n">Note: Interviewee should not lie while answering to such questions because interviewer can investigate.</h4>
+<p>Yes, I had many offers from many IT companies like HCL and TCS.</p>
+<hr>
+
+<h3 class="h3">8) Tell us about Infosys and its positioning as compared to its competitors?</h3>
+<p>Infosys Limited is an Indian company. The headquarters are in Bengaluru, Karnataka, India. Company trade name as "Infosys Technologies Limited." This company provides consulting, information technology and outsourcing services.</p>
+<p>Infosys has many competitors, providing the software facilities worldwide. HCL, Wipro, IBM, and Microsoft were some software companies in competition with Infosys.</p>
+<hr>
+
+<h3 class="h3">9) You had to wait for 5 hours for the interview. Are you feeling tired?</h3>
+<h4 class="n">Note: This type of questions were asked by the interviewer to check your patience level and willing to work in the company. </h4>
+<p><strong>Example:</strong> "No. This is my dream company so wait doesn't matter. I have enough time for the interview."</p>
+<hr>
+
+<h3 class="h3">10) Tell me how your online test was?</h3>
+<h4 class="n">Note: This type of question asked by the interviewer to check your confidence level for the online test. </h4>
+<p>Answer of this question depends upon the interviewee, If the interviewee faces any problem while giving the online test then he can tell the issue to the interviewer otherwise answer will be "Online test was good."</p>
+<hr>
+
+<h3 class="h3">11) What is your father's occupation? What is his job location?</h3>
+<h4 class="n">Note: Answer to this question depends on the interviewee personal information. Every father might have different occupation and designation.</h4>
+<p><strong>For Example</strong>, My father is a police officer working in Rajiv Chowk police station.</p>
+<hr>
+
+<h3 class="h3">12) Who is your role model? What have you incorporated into your life from him/her?</h3>
+<p><strong>Example:</strong> The role model of my life is my mother. Whenever I am down my mother helps me to push my limits, and she always keeps me on the track. She scolds me every time when I do something wrong. She is everything for me, and I always got inspired from her how she manages every problem in every situation.</p>
+<hr>
+
+<h3 class="h3">13) Where do you live?</h3>
+<h4 class="n">Note: Answer to this question depends on the interviewee personal information.</h4>
+<p><strong>Example 1:</strong> I am living with my family in New Delhi.</p>
+<p><strong>Example 2:</strong> I am living in a hostel of Cambridge University.</p>
+<hr>
+
+<h3 class="h3">14) What functional/technical areas you have interest? Would you be passionate to work? Why?</h3>
+<h4 class="n">Note: Answer to this question depends on the interviewee personal information. I suggest being careful while answering such a question because the interviewer is going to test your knowledge on the technical/functional areas of your interest.</h4>
+<p><strong>Example:</strong> Technically, I am active in programming, and I will be passionate to work on my programming skills because programming is nothing but just telling the computer how to perform tasks.</p>
+<hr>
+
+<h3 class="h3">15) What about your weaknesses and strengths? How will you overcome your weaknesses?</h3>
+<h4 class="n">Note: While answering such a question, the interviewee should be very careful. Because disclosing too much weakness will make fewer chances of being selected.</h4>
+<p><strong>Example:</strong> I can sort out almost every problem, and I think adaptability, quick learning and problem-solving are my positive points and coming to my weakness I am emotional kind of person, but this might be helpful in maintaining the proper relationship. </p>
+<hr>
+
+<h3 class="h3">16) What Four things would make a good leader?</h3>
+<p>The three things would make a good leader are listed below:</p>
+<ul class="points">
+<li>Have Faith in Their Beliefs</li>
+<li>Earn the Respect of the Team</li>
+<li>Make the Hard Choice</li>
+<li>Being close to your team members. </li>
+</ul>
+<hr>
+
+<h3 class="h3">17) What is the success?</h3>
+<p>Success refers to the accomplishment of an aim or purpose.</p>
+<hr>
+
+<h3 class="h3">18) What was the hardest experience you ever experienced?</h3>
+<p>The hardest experience I had experienced in my life is doing my university project alone because no one understands my project idea. </p>
+<hr>
+
+<h3 class="h3">19) Have you ever been a leader?</h3>
+<p>Yes, I have been the team leader in my last working organization, where I confidently applied my leadership quality to all my team members. I often give small treats to all my team members in return for successful completion of the assigned task.</p>
+<hr>
+
+<h3 class="h3">20) Which is the most stressful situation you?ve faced in college life?</h3>
+<p><strong>Example:</strong> The most stressful situation I have faced in college life is learning accountancy, which is of course not a subject of computer science but, in Indira Gandhi National Open University (IGNOU) accountancy is a compulsory subject to Complete BCA programme. Well, that was a very stressful situation for me, one side I was against the education system, and in another side, I was not so right in accountancy. After all of this, I started learning accountancy. In my early phase I started facing a few difficulties, but after some days I was able to sort out almost every problem. </p>
+<hr>
+
+<h3 class="h3">21) Tell me one real-time situation where you have emerged as a Leader?</h3>
+<h4 class="n">Note: Answering such questions employee have to relate his previous work experience. </h4>
+<p><strong>Example 1:</strong> Yes, in my previous organization I had emerged as the group leader in the technical department. Where I had faced many challenges facing the issues but after some time I can sort every problem.</p>
+<p><strong>If the person is a fresher, then he should answer like this: </strong></p>
+<p><strong>Example 2:</strong> I don't have any work experience, so I have no such real-time situation when I have emerged as a leader but, in my college, I have been the leader of the group project. In my team, I have emerged as a leader.</p>
+<hr>
+
+<h3 class="h3">22) What makes you stand out against all the other candidates?</h3>
+<p>I understand that success is not always guaranteed but there is still hope, and I never lose the faith, whether I succeed or not. I think this power makes me standalone from all other candidates.</p>
+<hr>
+
+<h3 class="h3">23) Where will you like to see yourself in the next five years?</h3>
+<p>I will see myself in a respectful position in your company.</p>
+<hr>
+
+<h3 class="h3">24) What is your ultimate goal in life?</h3>
+<p>My goal is to work for the company like Infosys where I can enhance my technical skills and knowledge, and my long-term goal is to see myself at a topmost position in a reputed company like yours.</p>
+<hr>
+
+<h3 class="h3">25) Which is the most recent project you have worked on (from resume)?</h3>
+<p>I had worked on swiggy food delivering a mobile Android application.</p>
+<hr>
+
+<h3 class="h3">26) Which personal attributes do you have?</h3>
+<ul class="points">
+<li>I always stay positive.</li>
+<li>I hold a positive attitude towards all my elders and Youngers.</li>
+</ul>
+<hr>
+
+<h3 class="h3">27) Where do you rate yourself as an engineer?</h3>
+<p>I will rate myself 7 out of 10 as an engineer because there are always some things which have to learn in life.</p>
+<hr>
+
+<h3 class="h3">28) What is your strong point regarding technical knowledge? Like JAVA, C, C++.</h3>
+<p>My strongest point of technical knowledge is programming. I like every programming language because programming is as easy as telling someone to perform some task, for that you need the same communication language. The only difference is we are telling task to the computer instead of the humans.</p>
+<hr>
+
+<h3 class="h3">29) Do you have any question for us?</h3>
+<h4 class="n">Note: When the interviewers ask this "do you have any question." Most of the candidates say no. It is a wrong practice. Candidates should ask questions also according to the situation, and it shows that you are listening correctly and have a keen interest. Asking questions also gives you an opportunity to find the right place for you in the company. But always remember that it should not look artificial. </h4>
+
+</div>
+</div>
+
+
+
+</body>
+</html>

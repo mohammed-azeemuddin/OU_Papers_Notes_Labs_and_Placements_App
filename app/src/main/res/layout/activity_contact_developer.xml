@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen.ContactDeveloper"
+    android:background="@color/dark_dev">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/dev"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/dev_pic"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></pl.droidsonroids.gif.GifImageView>
+
+    <TextView
+        android:id="@+id/textView10"
+        style="@android:style/Widget.DeviceDefault.Light.TextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="For any queries or suggestions, \n reach out to me on \n\n\n ouallinone@gmail.com"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dev" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

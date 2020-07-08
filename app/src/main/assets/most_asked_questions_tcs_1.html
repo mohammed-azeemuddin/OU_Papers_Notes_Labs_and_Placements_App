@@ -1,0 +1,413 @@
+<html>
+<body>
+
+<hr>
+<h2 class="h2">TCS Technical Interview Questions</h2>
+<hr>
+
+<h3 class="h3">1) Explain the functionality of linked list.</h3>
+<p>A linked list consists of two parts: information and the link. In the single connected listening, the beginning of the list is marked by a unique pointer named start. This pointer does point to the first element of the list and the link part of each node consists of an arrow looking to the next node, but the last node of the list has null pointer identifying the previous node. With the help of start pointer, the linked list can be traversed easily.</p>
+<hr>
+<h3 class="h3">2) What are the four basic principles of OOPS?</h3>
+<p>The four basic principles of Object-Oriented Programming System are listed below:</p>
+<ul class="points">
+<li><strong>Abstraction</strong>: Abstraction is a process of hiding the implementation details and showing only functionality to the user. For example, sending SMS where you type the text and send the message. You don't know the internal processing about the message delivery.</li>
+<li>Abstraction lets you focus on what the object does instead of how it does it.</li>
+<li><strong>Inheritance</strong>: Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object. </li>
+<li><strong>Encapsulation</strong>: Encapsulation in Java is a process of wrapping code and data together into a single unit, for example, a capsule which is mixed of several medicines.</li>
+<li><strong>Polymorphism</strong>: Polymorphism in Java is a concept by which we can perform a single action in different ways. Polymorphism is derived from 2 Greek words: poly and morphs. The word "poly" means many and "morphs" means forms. So polymorphism means many forms.</li>
+</ul>
+<hr>
+<h3 class="h3">3) What is inheritance?</h3>
+<p>In, Object-Oriented Programming, inheritance is a mechanism based on classes.</p>
+<p><strong>Inheritance</strong> refers to inhering the data members and properties of a parent class to a child class. A class which is derived from another level is often called as a sub-class or a child class, and the type from which the child class is obtained is known as super-class or parent class.</p>
+<hr>
+<h3 class="h3">4) What is the way of inheriting variable of one class to any other class?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-xml"><li class="alt"><span><span>//Base&nbsp;Class&nbsp;&nbsp;</span></span></li><li class=""><span>class&nbsp;A&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>{&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>public&nbsp;int&nbsp;a;&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li><li class=""><span>//Derived&nbsp;Class&nbsp;&nbsp;</span></li><li class="alt"><span>class&nbsp;B&nbsp;:&nbsp;A&nbsp;&nbsp;</span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span><span class="attribute">a</span><span>=</span><span class="attribute-value">15</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="html" style="display: none;">//Base Class
+class A 
+{ 
+public int a;
+}
+//Derived Class
+class B : A
+{
+a=15;
+}
+</textarea></div>
+<hr>
+<h3 class="h3">5) What is Polymorphism?</h3>
+<p>Polymorphism is a concept in OOPS which means having many forms. In simple words, it means that different actions will be performed in different instances. Polymorphism is of two types:</p>
+<ol class="points">
+<li>Method overloading</li>
+<li>Operator overloading</li>
+</ol>
+<hr>
+<h3 class="h3">6) What are the different types of inheritance?</h3>
+<p><strong>Types of Inheritance:</strong></p>
+<ol class="points">
+<li>Single inheritance</li>
+<li>Multiple Inheritance</li>
+<li>Multi-level Inheritance</li>
+<li>Multi-path Inheritance</li>
+<li>Hierarchical Inheritance</li>
+<li>Hybrid Inheritance</li>
+</ol>
+<hr>
+<h3 class="h3">7) What is the difference between classes and interface?</h3>
+<p>The differences between classes and interfaces are listed below:</p>
+<ul class="points">
+<li>A class can be instantiated by creating its object, whereas interfaces cannot be instantiated as all the methods in the interface are abstract and do not perform any action, so there is no use of instantiating an interface. </li>
+<li>A class is declared using class keyword whereas an interface is declared using interface keyword.</li>
+<li>The members of the class can have access specifier such as public, protected, and private but members of the interface can not have the access specifier, all the members of the interface is declared as public because the interface is used to derive another class. There will be no use to access specifies inside the members of an interface.</li>
+<li>The methods inside the class are defined to perform some actions on the fields declared in the class whereas interface lacks in asserting in areas, the ways in an interface are purely abstract.</li>
+<li>A class can implement any number of the interface but can only extend one superclass. Whereas interface can reach any number of interfaces but cannot perform any interface. </li>
+<li>A class can have a constructor defined inside the class to declare the fields inside the class, whereas interface doesn't have any constructor defined because there are no fields to be initialized.</li>
+</ul>
+<hr>
+<h3 class="h3">8) What is software development life-cycle?</h3>
+<p><strong>Software development life-cycle</strong> is steps involved in the life cycle of software development phase. Generally, it is followed by the development team which develops the software in the organization. It consists of a clear explanation of developing and  maintaining the software.</p>
+<hr>
+<h3 class="h3">9) What is normalization of databases, joins, and keys?</h3>
+<p>Normalization is process of organizing data in a database efficiently. Two goals of the normalization process are: to eliminate redundant data (for example, storing the same data in more than one table) and also ensure data dependencies make sense (only storing related data in a table). These both are important as they reduce the amount of space a database consumes and ensure that data is logically stored.</p>
+<hr>
+<h3 class="h3">10) What are loops?</h3>
+<p>Loops are used to execute block of statement several times in a program depending upon the conditional statement. The basic structure of a circuit is given above in the diagram. For each successful execution of the loop, the conditional statement should be checked. If the conditional statement is true, then the circuit will be executed. If the conditional statement is false, then the course will be terminated.</p>
+<hr>
+<h3 class="h3">11) Explain about Joins, Views, Normalization, Triggers?</h3>
+<p>The JOIN keyword is used in an SQL statement to query data from two or more tables, based on a relationship between specific columns in these tables.</p>
+<p>Tables in a database are often related to each other with keys.</p>
+<p>A view is a virtual table. A look contains rows and columns, just like a real table. The fields in a picture are fields from one or more real tables in the database.</p>
+<p>You can add SQL functions, WHERE, and JOIN statements to a view and present the data as if the data were coming from one single table.</p>
+<hr>
+<h3 class="h3">12) List different advantages of DBMS</h3>
+<p>Improved data sharing.</p>
+<p>The list of several advantages of DataBase Management System:</p>
+<ul class="points">
+<li>Improved data security.</li>
+<li>Better data integration.</li>
+<li> Minimized data inconsistency.</li>
+<li>Improved data access.</li>
+<li>Improved decision making.</li>
+<li>Increased end-user productivity.</li>
+</ul>
+<hr>
+<h3 class="h3">13) What is Database Management System?</h3>
+<p>A DataBase Management System is a software system used for creating and managing databases. DBMS make it possible for the end user to build and maintain databases. DBMS provides an interface between the end user/application and the databases.</p>
+<hr>
+<h3 class="h3">14) What is database Schema?</h3>
+<p>The formal definition of the database schema is a set of formulas (sentences) called integrity constraints imposed on a database. </p>
+<hr>
+<h3 class="h3">15) What are the conditional statements?</h3>
+<p>The conditional statements can alternatively be called as conditional expression also. Conditional comments are the set of rules which were executed if a particular condition is true. It is often referred to an if-then statement because if the state is true, then the statement is executed.</p>
+<hr>
+<h3 class="h3">16) What is the difference between the foreign key and reference key?</h3>
+<p>Reference Key is the primary key that is referenced in the other table (linked via the other tables Foreign Key). Foreign Key is how you connect the second table to the primary tables Primary Key (or Reference Key).</p>
+<hr>
+<h3 class="h3">17) What is the difference and similarity between C and C++?</h3>
+<p>C++ has classes whereas C did not have classes.</p>
+<p>C does not support function overloading. In C, for input or output, we use functions like gets(), puts(), scanf(), printf(), etc</p>
+<p>C does not support exception handling.</p>
+<hr>
+<h3 class="h3">18) The structural difference between bitmap and b-tree index?</h3>
+<p><strong>Btree</strong></p>
+<p>It is made of branch nodes and leaf nodes. Branch nodes hold prefix key value along with the link to the leaf node and the leaf nodes contain the indexed value and rowed.</p>
+<p><strong>Bitmap</strong></p>
+<p>It consists merely of bits for every single distinct value. It uses a string of bits to locate rows in a table quickly. It is used to index low cardinality columns.</p>
+<hr>
+<h3 class="h3">19) What is the difference between a Clustered index and non-clustered index?</h3>
+<p><strong>Clustered Index</strong></p>
+<ul class="points">
+<li>Only one per table</li>
+<li>Faster to read than non clustered as data is physically stored in index order</li>
+</ul>
+<p><strong>Non-Clustered Index</strong></p>
+<ul class="points">
+<li>Can be used lot of times per table</li>
+<li>Quicker for insert and update operations than a clustered index</li>
+</ul>
+<hr>
+<h3 class="h3">20) Diffrentiate between socket and session?</h3>
+<p>Socket is the Combination of IP address and Port Number (in pairs)</p>
+<p>The session is a Logical Connectivity between the source and destination.</p>
+<hr>
+<h3 class="h3">21) What is an array?</h3>
+<p>An array is a collection of similar elements. For an array, the necessary condition is that the data type of all the elements in the array must be same. The declaration of an array in C++ is as follows:</p>
+<p>int a[10]; </p>
+<p>This defines an array whose name is a and has ten elements from index 0-9</p>
+<hr>
+<h3 class="h3">22) Given an array of 1s and 0s arrange the 1s together and 0s together in a single scan of the array. Optimize the boundary conditions.</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">&nbsp;#include&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="preprocessor">#include&lt;conio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">void</span><span>&nbsp;main()&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;A[10]={</span><span class="string">'0'</span><span>,</span><span class="string">'1'</span><span>,</span><span class="string">'0'</span><span>,</span><span class="string">'1'</span><span>,</span><span class="string">'0'</span><span>,</span><span class="string">'0'</span><span>,</span><span class="string">'0'</span><span>,</span><span class="string">'1'</span><span>,</span><span class="string">'0'</span><span>,</span><span class="string">'1'</span><span>,</span><span class="string">'0'</span><span>,</span><span class="string">'0'</span><span>};&nbsp;&nbsp;</span></span></li><li class=""><span><span class="datatypes">int</span><span>&nbsp;x=0,y=A.length-1;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">while</span><span>(x&nbsp;&nbsp;</span></span></li><li class=""><span>x++;&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">else</span><span>&nbsp;</span><span class="keyword">if</span><span>(A[y])&nbsp;&nbsp;</span></span></li><li class=""><span>y--;&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">if</span><span>(A[x]&nbsp;&amp;&amp;&nbsp;!A[y])</span><span class="comment">//here&nbsp;we&nbsp;are&nbsp;checking&nbsp;that&nbsp;stating&nbsp;index&nbsp;is&nbsp;having&nbsp;1&nbsp;and&nbsp;last&nbsp;index&nbsp;having&nbsp;0&nbsp;than&nbsp;swap&nbsp;values</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>A[x]=0,A[y]=1;&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li><li class=""><span>getch();&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="cpp" style="display: none;"> #include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+int A[10]={'0','1','0','1','0','0','0','1','0','1','0','0'};
+int x=0,y=A.length-1;
+while(x
+x++;
+else if(A[y])
+y--;
+if(A[x] &amp;&amp; !A[y])//here we are checking that stating index is having 1 and last index having 0 than swap values
+A[x]=0,A[y]=1;
+}
+getch();
+}
+</textarea></div>
+<hr>
+<h3 class="h3">23) Define Data Abstraction. What are their importance?</h3>
+<p>Abstraction is process of recognizing and focusing on essential characteristics of a situation or object and leaving/filtering out the unwanted components of that situation or object.</p>
+<p>Abstraction is the basis for software development. It's through this concept we define the essential aspects of a system. The process of identifying and designing the ideas for a given system is called Modeling ( objectmodeling).</p>
+<p>Three levels of data abstraction are:</p>
+<ol class="points">
+<li><strong>Logical level</strong>: Information stored in the database. e.g., Database administrator</li>
+<li><strong>Physical level</strong>: Where data is stored physically in the database.</li>
+<li><strong>View level</strong>: End users always work on view level. If any amendment is made it may be saved by another name.</li>
+</ol>
+<hr>
+<h3 class="h3">24) Write a function to swap two numbers without using a temporary variable.</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="keyword">void</span><span>&nbsp;swap(</span><span class="datatypes">int</span><span>&nbsp;&amp;i,&nbsp;</span><span class="datatypes">int</span><span>&nbsp;&amp;j)&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>i=i+j;&nbsp;&nbsp;</span></li><li class=""><span>j=i-j;&nbsp;&nbsp;</span></li><li class="alt"><span>i=i-j;&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="cpp" style="display: none;">void swap(int &amp;i, int &amp;j)
+{
+i=i+j;
+j=i-j;
+i=i-j;
+}
+</textarea></div>
+<hr>
+<h3 class="h3">25) Memory Allocation in C/C++</h3>
+<p>The calloc() function allocates a memory area; the length will be the product of its parameters (it has two settings). calloc fills the memory with ZERO's and returns a pointer to the first byte. If that fails to locate enough space, it returns a NULL pointer.</p>
+<p>A malloc() function allocates a memory area; length will be the value entered as parameter. (it has one parameter). It does not initialize memory area</p>
+<p>The free() function is used to free the allocated memory(allocated through the calloc and malloc), in other words, this used release the allocated memory</p>
+<p>new also used to allocate memory on the heap and initialize the memory using constructor</p>
+<p>delete also used release memory allocated by new operator</p>
+<hr>
+<h3 class="h3">26) Write output of the program?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;i=10;&nbsp;&nbsp;</span></span></li><li class=""><span>printf(<span class="string">"%d%d%d"</span><span>,i,++i,i++);&nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="cpp" style="display: none;">int i=10;
+printf("%d%d%d",i,++i,i++);
+</textarea></div>
+<p>Answer= 10 12 12</p>
+<hr>
+<h3 class="h3">27) what is virtual function and pure virtual function?</h3>
+<p><strong>Virtual function</strong>:- To achieve polymorphism, function in base class is declared as virtual. By state virtual, we make a base class pointer to execute the purpose of any derived class depends on the content of pointer (any acquired class address).</p>
+<p><strong>Pure Virtual Function</strong>:- This is the function used in base class, and its definition has to be provided in derived class, In other pure virtual function has no definition in the base is declared as :</p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="keyword">virtual</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;fun()=0;&nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="cpp" style="display: none;">virtual void fun()=0;
+</textarea></div>
+<p>It means that this function is not going to do anything, In case of pure virtual function derived function has to</p>
+<p>implement a pure virtual function or redeclare it as a pure virtual function</p>
+<hr>
+<h3 class="h3">28) What are WPF and WCF?</h3>
+<p>WPF/WCF application, need in .NET 3.0 Framework. These application will cover the following concepts:</p>
+<p><strong>WCF(Windows Communication Foundation)</strong></p>
+<ul class="points">
+<li>The new service orientated attributes</li>
+<li>The use of interfaces</li>
+<li>The use of callbacks</li>
+<li>Asynchronous delegates</li>
+<li>Creating the proxy</li>
+</ul>
+<p><strong>WPF( Windows Presentation Foundation )</strong></p>
+<ul class="points">
+<li>Styles</li>
+<li>Templates</li>
+<li>Animations</li>
+<li>Databinding</li>
+</ul>
+<hr>
+<h3 class="h3">29) Write a program in C to swap two numbers without help of a third variable.</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span>&nbsp;&nbsp;</span><span class="comment">/*</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;C++&nbsp;program&nbsp;to&nbsp;swap&nbsp;two&nbsp;numbers&nbsp;without&nbsp;using&nbsp;a&nbsp;temporary&nbsp;variable</span>&nbsp;</span></li><li class="alt"><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="preprocessor">&nbsp;&nbsp;&nbsp;&nbsp;#include&lt;iostream&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">using</span><span>&nbsp;</span><span class="keyword">namespace</span><span>&nbsp;std;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="comment">/*&nbsp;Function&nbsp;for&nbsp;swapping&nbsp;the&nbsp;values&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;swap(</span><span class="datatypes">int</span><span>&nbsp;&amp;a,&nbsp;</span><span class="datatypes">int</span><span>&nbsp;&amp;b)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b&nbsp;=&nbsp;a&nbsp;+&nbsp;b;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;=&nbsp;b&nbsp;-&nbsp;a;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b&nbsp;=&nbsp;b&nbsp;-&nbsp;a;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;main()&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;a,&nbsp;b;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>cout&nbsp;&lt;&lt;&nbsp;<span class="string">"Enter&nbsp;two&nbsp;numbers&nbsp;to&nbsp;be&nbsp;swapped&nbsp;:&nbsp;"</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>cin&nbsp;&gt;&gt;&nbsp;a&nbsp;&gt;&gt;&nbsp;b;&nbsp;&nbsp;</span></li><li class=""><span>swap(a,&nbsp;b);&nbsp;&nbsp;</span></li><li class="alt"><span>cout&nbsp;&lt;&lt;&nbsp;<span class="string">"The&nbsp;two&nbsp;numbers&nbsp;after&nbsp;swapping&nbsp;become&nbsp;:"</span><span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class=""><span>cout&nbsp;&lt;&lt;&nbsp;<span class="string">"Value&nbsp;of&nbsp;a&nbsp;:&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;a&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>cout&nbsp;&lt;&lt;&nbsp;<span class="string">"Value&nbsp;of&nbsp;b&nbsp;:&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;b&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="cpp" style="display: none;">  /*
+     * C++ program to swap two numbers without using a temporary variable
+    */
+    #include&lt;iostream&gt;
+    using namespace std;
+  
+   /* Function for swapping the values */
+    void swap(int &amp;a, int &amp;b)
+  {
+        b = a + b;
+       a = b - a;
+        b = b - a;
+    }
+    int main()
+    {
+    int a, b;
+    
+cout &lt;&lt; "Enter two numbers to be swapped : ";
+cin &gt;&gt; a &gt;&gt; b;
+swap(a, b);
+cout &lt;&lt; "The two numbers after swapping become :" &lt;&lt; endl;
+cout &lt;&lt; "Value of a : " &lt;&lt; a &lt;&lt; endl;
+cout &lt;&lt; "Value of b : " &lt;&lt; b &lt;&lt; endl;
+}
+</textarea></div>
+<hr>
+<h3 class="h3">30) What will be output of the following code?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>&nbsp;</span><span class="comment">//&nbsp;file&nbsp;name:&nbsp;Main.java</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;Complex&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">double</span><span>&nbsp;&nbsp;re,&nbsp;im;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;Complex(</span><span class="keyword">double</span><span>&nbsp;re,&nbsp;</span><span class="keyword">double</span><span>&nbsp;it)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.re&nbsp;=&nbsp;re;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.im&nbsp;=&nbsp;im;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//&nbsp;Driver&nbsp;class&nbsp;to&nbsp;test&nbsp;the&nbsp;Complex&nbsp;level</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Main&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;main(String[]&nbsp;args)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Complex&nbsp;c1&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;Complex(</span><span class="number">10</span><span>,&nbsp;</span><span class="number">15</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(c1);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" style="display: none;"> // file name: Main.java
+ 
+class Complex {
+    private double  re, im;         
+ 
+    public Complex(double re, double it) {
+        this.re = re;
+        this.im = im;
+    }
+}
+  
+// Driver class to test the Complex level
+public class Main {
+    public static void main(String[] args) {
+        Complex c1 = new Complex(10, 15);
+        System.out.println(c1);
+    }
+}
+</textarea></div>
+<hr>
+<h3 class="h3">31) Find the output of the following program.</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Prg&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;main(String&nbsp;args[]){&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(<span class="string">"A"</span><span>&nbsp;+&nbsp;</span><span class="string">"B"</span><span>&nbsp;+&nbsp;</span><span class="string">'A'</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" style="display: none;"> public class Prg {
+    public static void main(String args[]){
+        System.out.print("A" + "B" + 'A');
+    }
+}
+</textarea></div>
+<hr>
+<h3 class="h3">32) What will be the output of following program ?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Prg&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;main(String&nbsp;args[]){&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(<span class="string">'A'</span><span>&nbsp;+&nbsp;</span><span class="string">'B'</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" style="display: none;"> public class Prg {
+    public static void main(String args[]){
+        System.out.print('A' + 'B');
+    }
+}
+</textarea></div>
+<hr>
+<h3 class="h3">33)What will be output of following program?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Prg&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;main(String[]&nbsp;args)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">char</span><span>&nbsp;[]&nbsp;str={</span><span class="string">'i'</span><span>,</span><span class="string">'n'</span><span>,</span><span class="string">'c'</span><span>,</span><span class="string">'l'</span><span>,</span><span class="string">'u'</span><span>,</span><span class="string">'d'</span><span>,</span><span class="string">'e'</span><span>,</span><span class="string">'h'</span><span>,</span><span class="string">'e'</span><span>,</span><span class="string">'l'</span><span>,</span><span class="string">'p'</span><span>};&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(str.toString());&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" style="display: none;"> public class Prg {
+    public static void main(String[] args) {
+        char [] str={'i','n','c','l','u','d','e','h','e','l','p'};
+        System.out.println(str.toString());
+    }
+}
+</textarea></div>
+<hr>
+<h3 class="h3">34) What will be output of following program?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;pg&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;main(String[]&nbsp;args)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(<span class="string">"Hello"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class="string">"Guys!"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" style="display: none;"> public class pg {
+    public static void main(String[] args) {
+        System.out.print("Hello");
+        System.out.println("Guys!");
+    }
+}
+</textarea></div>
+<hr>
+<h3 class="h3">35) What will be output of following program?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="keyword">class</span><span>&nbsp;Test2&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>ublic&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">static</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;main(String[]&nbsp;args)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">byte</span><span>&nbsp;x&nbsp;=&nbsp;</span><span class="number">12</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">byte</span><span>&nbsp;y&nbsp;=&nbsp;</span><span class="number">13</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">byte</span><span>&nbsp;result&nbsp;=&nbsp;x&nbsp;+&nbsp;y;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(result);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" style="display: none;"> class Test2 {
+public
+    static void main(String[] args)
+    {
+        byte x = 12;
+        byte y = 13;
+        byte result = x + y;
+        System.out.print(result);
+    }
+}
+</textarea></div>
+<hr>
+<h3 class="h3">36) What will be output of following program?</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">&nbsp;#include&nbsp;&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">union</span><span>&nbsp;test&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;x;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">char</span><span>&nbsp;arr[8];&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;y;&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;u;&nbsp;&nbsp;</span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;main()&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"%u"</span><span>,&nbsp;</span><span class="keyword">sizeof</span><span>(u));&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;0;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="cpp" style="display: none;"> #include &lt;stdio.h&gt;
+union test {
+    int x;
+    char arr[8];
+    int y;
+} u;
+int main()
+{
+    printf("%u", sizeof(u));
+    return 0;
+}
+</textarea></div>
+
+<hr>
+<h2 class="h2">TCS HR Interview Questions</h2>
+<hr>
+
+<h3 class="h3">1) Tell us something about yourself.</h3>
+<p>My name is Abhinav. I belong to Delhi. I was born in my native place and brought up in Delhi. I am a person who likes to explore new areas and meet new people. Coming to my academics, I have passed my B.Tech from GNIOT, Greater Noida with 64%. I have secured 72% in Class XII and 8.2 CGPA in Class X. In my family, I have a father, mother, grandfather &amp; grandmother and me. I had a work experience of x months in Javatpoint at Noida as a content writer and had gained a lot of knowledge about various languages.</p>
+<hr>
+<h3 class="h3">2) Do you wish to change your domain? If yes, why?</h3>
+<p>I want to work in an organization where I can develop the skill set gained from my Educational background as well as develop skills which will benefit throughout my career as regarding this job, this job is entirely connected with my domain of expertise, and also it helps me to enhance my communication skills which have been on my to-do list. So I want to get associated with such a big organization and also improve skill sets that I have always been wanting to upgrade.</p>
+<hr>
+<h3 class="h4">3) Describe an experience of yours wherein you were asked to do something which you didn't like to do and how you handled it?</h3>
+<h3 class="h4">This is a typical question which tests your presence of mind and your communication skills. Gather any instance from your life and speak on that.</h3> 
+<h3 class="h4">For your reference, a sample answer is provided. Your answer will be different from this one, but it might be of some help.</h3>
+<p>I have many life instances where I had to perform tasks which I did not like performing but as these tasks were mandatory hence backing off was not an option I could afford. One such memory I would like to share was from my 9th grade when we had to study Sanskrit as our school did not have option between Hindi and Sanskrit after class 9th so initially I did not care about this subject but when I started researching it I found that this subject is quite complicated and also I realized that I was not all good at remembering things, hence this subject became a difficult task for me but as I told backing off was not an option so I decided to take help from my parents, friends and other reliable sources and worked hard throughout the remaining time and at last the hard work paid off though I did not score excellent marks I achieved marks which I could not have believed I could score a few months back.</p>
+<hr>
+<h3 class="h3">4) What are your expectations from the company?</h3>
+<p>Though this answer is objective and can be different for different persons but remember be positive in your thoughts and do not say many things about the company which gives the interviewer an illusion that you are exaggerating. </p>
+<p>In short, be realistic and precise.</p>
+<p>I have from a long time wanted to work with an IT company which treats its employees in the best way it can. I have always wanted to work with an organization which provides a very comfortable and home like work environment and when it comes to TCS I find that both the requirements are fulfilled. Even requirements I can hardly imagine are met, most importantly I get the opportunity to learn and enhance my skill set to become a better professional in the future.</p>
+<hr>
+<h3 class="h3">5) Will you be comfortable relocating?</h3>
+<p>Remember this answer requires a clear-cut reply and wants to know as the company might provide time to time travel hence do not try to be good and if you are not able to change places tell them explicitly if they have any positions for that kind of post they will consider you. Also, refer to the sample answer given below.</p>
+<p>Yes, as part of growing up I used to travel a lot as my father is an ex-serviceman hence occasionally he used to be posted throughout the country. Though I would prefer my city as it helps me live with people, I care about, but at the same time, I am ok with relocating.</p>
+<hr>
+<h3 class="h3">6) What is it like to live in Delhi (your state)?</h3>
+<p>You can tell unique things about your states; this may consist of things which you might or want to improve, as a said before stick to being realistic.</p> 
+<p>Delhi is one of the busiest cities in India and though I do not have any knowledge of towns outside India hope it will also be the most active of all. Delhi like Mumbai never sleeps and in Delhi, as we know have lots of places to wander and explore. Also being central to many states and the Capital of India it is the center of attraction for many, and hence due to constant migration, we find a variety of people residing in Delhi. Also, Delhi has all kinds of markets, and also it has hospitals and facilities which are top notch and can be compared to best across the globe. Hence, living in Delhi is like a dream come true.</p>
+<hr>
+<h3 class="h3">7) Tell me something about the most memorable day of your life?</h3>
+<p>By this question, the interviewer wants to check whether you can cope with on-the-spot situations, take some time gather your thoughts and speak up.</p>
+<p>The most memorable day of my life would without any second thought be the day when I passed my graduation. That day I felt like now I can get a respectable job lead an independent life and slowly and steadily I have turned from a dependent boy to independent man. I am now mature enough to take my life decisions and decide what is right for me and what is not. That day I realized why my grandfathers and old people are so nostalgic and have so many memories associated with the Independence of our country and such small word independence could have such massive meaning attached to it.</p>
+<hr>
+<h3 class="h3">8) What are your strengths?</h3>
+<p>Never tell strengths which you cannot prove on the spot. And speak only the forces that are true.</p>
+<p>In my opinion, I am a team player I have always loved working as a team, performing for the betterment of the team has ever made me proud and getting to handle captaincy or leadership of my colleagues has always been the work I always loved.</p>
+<p>Also, things that are hard to get I love getting them, though it sounds bit confusing to understand so let me elaborate with an instance, After my graduation I had not acquired skills required to get an excellent job through my communication skills were ok but I really lacked in technical part, and it was easy for me to take nonprofessional job also they had an attractive pay scale and it was difficult for me to learn programming skills and become good in coding but I decided to get things the hard way and work till I succeed and thereafter I worked on technical domain and here I am .So hard work eventually pays off.</p>
+<hr>
+<h3 class="h3">9) What are your weaknesses?</h3>
+<p>Though this is a tricky question but doesn't be the bait, i.e., the interviewer wants to know your weakness but tell him weakness such that they are also in some way your strengths.</p>
+<p>Though it is difficult to see your weakness yourself as we all know the general human tendency is to shift the blame and never take the responsibility for some wrongdoing. But to be honest, I find that when I want to achieve something, I work hard to get that though it might not be worth it to work so hard for the happiness that I get after attaining I work hard, so in the meantime I miss out on another event concurrently happening.</p>
+<hr>
+<h3 class="h3">10) Why should we hire you?</h3>
+<p>A quite typical question and needs to be answered sensibly.</p>
+<p>The requirement for this job completely matches my skill set, as a candidate I have experience working in this domain which might be beneficial for the organization as well as me. Also, I am a quick learner and a team player so the organization won`t have to spend much time and resources on me. Even when I work, I work for the maximum benefit of the organization. Moreover, I would gain exposure to the industry which will be very beneficial to my career.</p>
+<hr>
+<h3 class="h3">11) Is there anything which makes you different from other candidates?</h3>
+<p>Again...Be realistic </p>
+<p>Yes, there are lots of things which distinguish me as an individual. Every individual is different. But if you ask about positive qualities in me, then I would say I am a team player, quick learner and have some leadership qualities. Though these thoughts are objective to individual and can be known better when you know me as an individual.</p>
+<hr>
+<h3 class="h3">12) What are your views on demonetization?</h3>
+<p>This is a significant topic of discussion, and I have a lot of things to say, but considering the short duration of this interview I would like to summarize this like:</p>
+<ul class="points">
+<li>It was a very significant decision I would say, but not that great on the implementation part.</li>
+<li>The government should have taken a stand on so many people died during the initial period.</li>
+<li>The objective was not met entirely as not many people having black money were caught.</li>
+<li>The GDP of our country had increased.</li>
+<li>All in all, there are many positives and negatives in this action hence to reach a conclusion would not do justice.</li>
+</ul>
+<hr>
+<h3 class="h3">13) Tell me about your daily routine?</h3>
+<p>Just describe your routine.</p>
+<p>Nowadays, I have quite a hectic schedule, and I have long been reaching out for a holiday or break, but as you ask I would describe my routine as:</p>
+<p>I wake up at 0700hours. I perform all my daily chores and get ready to leave for office at about 0800 hours. I commute by metro, and then I reach my office at an estimated time of 0930 hours. I work there till 1300 hours and then we have a half an hour break, after the break, we get back to work, and I have a Java class from 1530 to 1700, and after completing the course, I work for about 90 minutes, and at 1830 hours I depart for home. Again my house is 90 minutes ride in metro, and by 2000 hours I reach home and watch a great movie and by the time the film is finished I am off to sleep and the day is finished and next day again back to work.</p>
+<hr>
+<h3 class="h3">14) Mention any five qualities that a person should have for this profile?</h3>
+<p>Depends on the job.</p>
+<hr>
+<h3 class="h3">15) Speak on any topic of your interest for at least 5 minutes.</h3>
+<p>You have to speak on any topic.</p>
+<hr>
+<h3 class="h3">16) Describe the experience of visiting any place during your vacations.</h3>
+<p>You need to describe any experience.</p>
+<hr>
+<h3 class="h3">17) Do you have any prior work experience? If so tell us about your last job and why you left it.</h3>
+<p>You can tell about your work experience, and why left it but don't give any negative answer as they have a negative impact. Answer like for growth, for a better opportunity, to enhance your skill set further.</p>
+<hr>
+<h3 class="h3">18) What are your hobbies?</h3>
+<p>You can tell your hobbies. You must prepare for questions from your hobbies. </p>
+<hr>
+<h3 class="h3">19) What quality do you think a leader should have?</h3>
+<p>There are many qualities that a leader should have but to name a few, a leader should be able to coordinate a team, he should have excellent understanding of people and their behavior at different points of time, he should be able to find people he can depend on, he should be able to be distinguished in a crowd of people, he should be able to instruct a group of people, he should be dominant and many more are there.</p>
+<hr>
+<h3 class="h3">20) Have you applied anywhere before applying here? How many job offers have you received before this?</h3>
+<p>No</p>
+
+
+</div>
+</div>
+
+</body>
+</html>
