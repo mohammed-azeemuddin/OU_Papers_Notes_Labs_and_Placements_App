@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".NotificationTest.ProfileActivity"></activity>
+        <activity android:name=".OneSignalNotification.OneSignalMainActivity"></activity>
+        <activity android:name=".NotificationTest.ProfileActivity" />
         <activity android:name=".NotificationTest.MainNotificationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -71,10 +72,10 @@
         <activity android:name=".PrevQuesSetAndGetLists.PopulateListsForClasses" />
         <activity android:name=".PrevQuesSetAndGetLists.ReturnListsToClasses" />
         <activity android:name=".MainScreen.PreviousQuestionPapers2" />
-        
+
         <service android:name=".NotificationTest.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
     </application>

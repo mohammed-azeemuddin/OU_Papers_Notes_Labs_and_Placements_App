@@ -2,6 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.8, 0.99.99]'
+    }
+}
 
 //-----------------LOOOKKKK HEEEREEE , UNCOMMENT THIS FOR ADS------\\
 // apply plugin: 'com.google.gms.google-services'
@@ -32,6 +42,13 @@ android {
         versionName "6.0.1"
         // signingConfig signingConfigs.config
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                onesignal_app_id: 'PUT_YOUR_ONESIGNAL_APP_ID_HERE',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+
     }
 
     buildTypes {
@@ -89,6 +106,9 @@ android {
     repositories {
         mavenCentral()
     }
+    repositories {
+        maven { url 'https://maven.google.com' }
+    }
 }
 
 dependencies {
@@ -98,4 +118,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:20.1.4'
     implementation 'com.google.firebase:firebase-auth:19.3.1'
     implementation 'com.google.firebase:firebase-database:19.3.1'
+    implementation 'com.onesignal:OneSignal:[3.15.0, 3.99.99]'
 }
