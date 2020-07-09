@@ -15,15 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".OneSignalNotification.OneSignalMainActivity"></activity>
-        <activity android:name=".NotificationTest.ProfileActivity" />
-        <activity android:name=".NotificationTest.MainNotificationActivity">
+        <activity android:name=".OneSignalNotification.OneSignalMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NotificationTest.ProfileActivity" />
+        <activity android:name=".NotificationTest.MainNotificationActivity"/>
+
         <activity
             android:name=".RCV2.PracticePopUpWindow"
             android:theme="@style/AppTheme.CustomPopUpTheme" />
@@ -42,9 +42,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             -->
+
         </activity>
         <activity android:name=".RCV3.VideoRecyclerMainActivity" />
-        <activity android:name=".MainScreen.VideoTutorials" /> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <activity android:name=".MainScreen.VideoTutorials" />
+
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <!--
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -78,6 +81,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
     </application>
 
 </manifest>
