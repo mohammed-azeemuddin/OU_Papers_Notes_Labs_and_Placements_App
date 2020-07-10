@@ -23,7 +23,7 @@
         app:srcCompat="@drawable/ic_prev_paper_blue" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
