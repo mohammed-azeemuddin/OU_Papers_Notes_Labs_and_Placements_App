@@ -15,6 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
+        // Add the following to your AndroidManifest.xml to prevent the launching of your main Activity
+        // if you are calling notification from above.
+
+        <meta-data android:name="com.onesignal.NotificationOpened.DEFAULT" android:value="DISABLE" />
+
+
         <activity android:name=".OneSignalNotification.OneSignalMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
