@@ -6,7 +6,7 @@ apply plugin: 'com.google.gms.google-services'
 
 buildscript {
     repositories {
-        maven { url 'https://plugins.gradle.org/m2/'}
+        maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
         classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.8, 0.99.99]'
@@ -44,7 +44,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
-                onesignal_app_id: '7b6550cd-3f1a-4b33-b58c-6139e0dcece2',
+                onesignal_app_id               : '7b6550cd-3f1a-4b33-b58c-6139e0dcece2',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]

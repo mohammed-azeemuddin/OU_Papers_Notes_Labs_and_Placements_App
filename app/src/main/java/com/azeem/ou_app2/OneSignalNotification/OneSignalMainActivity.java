@@ -4,53 +4,64 @@ import android.app.Application;
 import android.content.Intent;
 import android.util.Log;
 
+import com.azeem.ou_app2.MainScreen.CoursesMainActivity;
+import com.azeem.ou_app2.MainScreen.JobsAndInternshipsMainActivity;
+import com.azeem.ou_app2.MainScreen.LabsAndViva;
 import com.azeem.ou_app2.MainScreen.MainActivity;
+import com.onesignal.OSNotificationAction;
 import com.onesignal.OSNotificationOpenResult;
 import com.onesignal.OneSignal;
-
 import org.json.JSONObject;
 
-public class OneSignalMainActivity extends Application {
+@SuppressWarnings("unused")
 
+public class OneSignalMainActivity extends Application
+{
     @Override
-    public void onCreate() {
+    public void onCreate()
+    {
         super.onCreate();
 
         OneSignal.startInit(this)
-                .setNotificationOpenedHandler(new ExampleNotificationOpenedHandler())
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .setNotificationOpenedHandler(new NotificationOpenedHandler())
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .init();
-
     }
 
-    private class ExampleNotificationOpenedHandler implements OneSignal.NotificationOpenedHandler {
-
-        // This fires when a notification is opened by tapping on it.
+    public class NotificationOpenedHandler implements OneSignal.NotificationOpenedHandler
+    {
         @Override
-        public void notificationOpened(OSNotificationOpenResult result) {
-
+        public void notificationOpened(OSNotificationOpenResult result)
+        {
+            OSNotificationAction.ActionType actionType = result.action.type;
             JSONObject data = result.notification.payload.additionalData;
+            String activityToBeOpened;
+            String activity;
+            String myUrl;
 
-            String customKey = null;
-            String openURL = null;
-            Object activityToLaunch = MainActivity.class;
-
-            if (data != null) {
-                customKey = data.optString("customkey", null);
-                openURL = data.optString("openURL", null);
+            if (data != null)
+            {
+                activityToBeOpened = data.optString("activityToBeOpened", null);
+                myUrl = data.optString("url",null);
+                if (activityToBeOpened != null && activityToBeOpened.equals("courses"))
+                {
+                    Log.i("OneSignal", "customkey set with value: " + activityToBeOpened);
+                    Intent intent = new Intent(OneSignalMainActivity.this, CoursesMainActivity.class);
+                    intent.putExtra("myUrl",myUrl);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                    startActivity(intent);
+                }
+                if (activityToBeOpened != null && activityToBeOpened.equals("jobs"))
+                {
+                    Intent intent = new Intent(OneSignalMainActivity.this, JobsAndInternshipsMainActivity.class);
+                    intent.putExtra("myUrl",myUrl);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                    startActivity(intent);
+                }
             }
-
-            // The following can be used to open an Activity of your choice.
-            // Replace - getApplicationContext() - with any Android Context.
-            // Intent intent = new Intent(getApplicationContext(), YourActivity.class);
-
-            Intent intent = new Intent(OneSignalMainActivity.this, (Class<?>) activityToLaunch);
-            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.putExtra("openURL", openURL);
-            Log.i("OneSignalExample", "openURL = " + openURL);
-            startActivity(intent);
-
         }
     }
 }
