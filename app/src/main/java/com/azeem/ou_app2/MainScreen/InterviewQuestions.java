@@ -71,6 +71,7 @@ public class InterviewQuestions extends AppCompatActivity {
         arrayAdapter = new ArrayAdapter(
                 this,
                 R.layout.row,
+                R.id.tv1,
                 arrayList);
 
 

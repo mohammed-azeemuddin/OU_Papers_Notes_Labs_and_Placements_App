@@ -72,7 +72,11 @@ public class AptitudePractice extends AppCompatActivity {
         arrayList.add("Tutorial Videos in English");
         arrayList.add("Tutorial Videos in Hindi");
 
-        arrayAdapter = new ArrayAdapter(this, R.layout.row, arrayList);
+        arrayAdapter = new ArrayAdapter(
+                this,
+                R.layout.row,
+                R.id.tv1,
+                arrayList);
 
         listView.setAdapter(arrayAdapter);
 
