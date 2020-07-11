@@ -6,8 +6,6 @@ import android.util.Log;
 
 import com.azeem.ou_app2.MainScreen.CoursesMainActivity;
 import com.azeem.ou_app2.MainScreen.JobsAndInternshipsMainActivity;
-import com.azeem.ou_app2.MainScreen.LabsAndViva;
-import com.azeem.ou_app2.MainScreen.MainActivity;
 import com.onesignal.OSNotificationAction;
 import com.onesignal.OSNotificationOpenResult;
 import com.onesignal.OneSignal;
@@ -38,17 +36,18 @@ public class OneSignalMainActivity extends Application
             JSONObject data = result.notification.payload.additionalData;
             String activityToBeOpened;
             String activity;
-            String myUrl;
+            String info;
 
             if (data != null)
             {
                 activityToBeOpened = data.optString("activityToBeOpened", null);
-                myUrl = data.optString("url",null);
+                info = data.optString("info", null);
                 if (activityToBeOpened != null && activityToBeOpened.equals("courses"))
                 {
-                    Log.i("OneSignal", "customkey set with value: " + activityToBeOpened);
+                    // Log.i("OneSignal", "customkey set with value: " + activityToBeOpened);
+
                     Intent intent = new Intent(OneSignalMainActivity.this, CoursesMainActivity.class);
-                    intent.putExtra("myUrl",myUrl);
+                    intent.putExtra("info",info);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
@@ -56,7 +55,7 @@ public class OneSignalMainActivity extends Application
                 if (activityToBeOpened != null && activityToBeOpened.equals("jobs"))
                 {
                     Intent intent = new Intent(OneSignalMainActivity.this, JobsAndInternshipsMainActivity.class);
-                    intent.putExtra("myUrl",myUrl);
+                    intent.putExtra("info",info);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
