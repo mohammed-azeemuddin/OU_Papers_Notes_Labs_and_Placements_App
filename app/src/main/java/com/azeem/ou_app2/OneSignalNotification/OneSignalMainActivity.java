@@ -2,7 +2,6 @@ package com.azeem.ou_app2.OneSignalNotification;
 
 import android.app.Application;
 import android.content.Intent;
-import android.util.Log;
 
 import com.azeem.ou_app2.MainScreen.CoursesMainActivity;
 import com.azeem.ou_app2.MainScreen.JobsAndInternshipsMainActivity;
