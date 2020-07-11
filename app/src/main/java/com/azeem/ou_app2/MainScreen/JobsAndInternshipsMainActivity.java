@@ -15,7 +15,7 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity {
 
     String info;
     TextView infoTextView2;
-    Button clickHereBtn;
+    Button clickHereBtn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +24,11 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity {
 
         info = getIntent().getStringExtra("info");
         infoTextView2 = findViewById(R.id.infoTextView2);
-        clickHereBtn = findViewById(R.id.click_here_btn);
+        clickHereBtn2 = findViewById(R.id.click_here_btn2);
 
         infoTextView2.setText(info);
 
-        clickHereBtn.setOnClickListener(new View.OnClickListener() {
+        clickHereBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent2=new Intent();
@@ -41,10 +41,4 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(JobsAndInternshipsMainActivity.this,PlacementAndInterviews.class);
-        startActivity(intent);
-    }
 }

@@ -10,7 +10,7 @@
     <application
         android:name=".OneSignalNotification.OneSignalMainActivity"
         android:allowBackup="true"
-        android:icon="@mipmap/final_app_icon_round"
+        android:icon="@mipmap/final_app_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"

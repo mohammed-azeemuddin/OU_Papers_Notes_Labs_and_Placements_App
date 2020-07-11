@@ -14,7 +14,7 @@
         android:id="@+id/title"
         android:text="Courses"
         android:textColor="@color/white"
-        android:textSize="40dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/courses_hat"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/my_notification"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Click here to Unlock/View \n Courses"
-        android:textSize="24dp"
+        android:textSize="15dp"
         android:textAllCaps="false"
         android:textStyle="italic"
         android:background="@drawable/curved_style"

@@ -39,11 +39,4 @@ public class CoursesMainActivity extends AppCompatActivity {
         });
 
     }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(CoursesMainActivity.this,PlacementAndInterviews.class);
-        startActivity(intent);
-    }
 }
