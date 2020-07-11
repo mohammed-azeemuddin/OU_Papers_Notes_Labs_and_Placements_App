@@ -46,6 +46,8 @@ public class PlacementAndInterviews extends AppCompatActivity {
                 "Technical MCQs (C,C++,Java,Python)",
                 "Interview Questions and Preparation",
                 "Company Specific Courses",
+                "Free/Paid courses",
+                "Jobs and Internships"
                 };
 
         String subs[] = {
@@ -53,13 +55,17 @@ public class PlacementAndInterviews extends AppCompatActivity {
                 "Tests and Video Tutorials",
                 "Important questions asked in interviews and efficient ways of cracking interviews",
                 "Courses tailored for company specific questions in tests and aptitude",
+                "Best online courses for improving your skills",
+                "Updates on Jobs and internships"
                 };
 
         int images[] = {
                 R.drawable.find_jobs,
                 R.drawable.tech_mcqs,
                 R.drawable.interview_ques,
-                R.drawable.comp_courses
+                R.drawable.comp_courses,
+                R.drawable.my_notification,
+                R.drawable.my_notification2
                 };
 
         for(int count = 0 ; count < heads.length ; count++)
