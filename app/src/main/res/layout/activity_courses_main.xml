@@ -13,7 +13,7 @@
         android:layout_marginTop="16dp"
         android:id="@+id/title"
         android:text="Courses"
-        android:textColor="@color/light_blue"
+        android:textColor="@color/white"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
