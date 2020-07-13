@@ -91,9 +91,6 @@ public class CoursesMainActivity extends AppCompatActivity implements RewardedVi
 
     @Override
     public void onRewardedVideoAdClosed() {
-        Toast.makeText(this,"You couldn't unlock the courses available",
-                Toast.LENGTH_LONG)
-                .show();
         loadRewardedVideoAd();
     }
 
@@ -104,7 +101,6 @@ public class CoursesMainActivity extends AppCompatActivity implements RewardedVi
         intent2.addCategory(Intent.CATEGORY_BROWSABLE);
         intent2.setData(Uri.parse("https://ouallinone.netlify.app/courses.html"));
         startActivity(intent2);
-        mRewardedVideoad.destroy(getApplicationContext());
     }
 
     @Override
@@ -118,9 +114,7 @@ public class CoursesMainActivity extends AppCompatActivity implements RewardedVi
 
     @Override
     public void onRewardedVideoCompleted() {
-        Intent intent = new Intent(this,PlacementAndInterviews.class);
-        intent.putExtra("back",1);
-        startActivity(intent);
+
     }
 
 }

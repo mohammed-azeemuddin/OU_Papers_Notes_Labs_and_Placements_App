@@ -122,15 +122,6 @@ public class PlacementAndInterviews extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        int val = getIntent().getIntExtra("back", 0);
-        if(val==1){
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        }
 
-
-    }
 }
+
