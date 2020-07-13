@@ -26,12 +26,14 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
     TextView infoTextView2;
     Button clickHereBtn2;
     private RewardedVideoAd mRewardedVideoad;
+    boolean isAdShown;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jobs_and_internships_main);
+        isAdShown=false;
 
         mRewardedVideoad = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoad.setRewardedVideoAdListener(this);
@@ -91,17 +93,19 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
 
     @Override
     public void onRewardedVideoAdClosed() {
-
-        Toast.makeText(this,"You couldn't unlock the placements section",
-                Toast.LENGTH_LONG)
-                .show();
-        loadRewardedVideoAd();
-
+            Toast.makeText(this, "You couldn't unlock the placements section",
+                    Toast.LENGTH_LONG)
+                    .show();
+            loadRewardedVideoAd();
     }
 
     @Override
     public void onRewarded(RewardItem rewardItem) {
-
+        Intent intent2=new Intent();
+        intent2.setAction(Intent.ACTION_VIEW);
+        intent2.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent2.setData(Uri.parse("https://ouallinone.netlify.app/placements.html"));
+        startActivity(intent2);
     }
 
     @Override
@@ -116,10 +120,8 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
 
     @Override
     public void onRewardedVideoCompleted() {
-        Intent intent2=new Intent();
-        intent2.setAction(Intent.ACTION_VIEW);
-        intent2.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent2.setData(Uri.parse("https://ouallinone.netlify.app/placements.html"));
-        startActivity(intent2);
+        mRewardedVideoad.destroy(getApplicationContext());
+        Intent intent = new Intent(this,PlacementAndInterviews.class);
+        startActivity(intent);
     }
 }
