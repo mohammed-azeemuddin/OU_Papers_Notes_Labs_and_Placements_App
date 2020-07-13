@@ -24,6 +24,11 @@ import com.android.volley.toolbox.Volley;
 import com.azeem.ou_app2.R;
 import com.azeem.ou_app2.RCV2.RecyclerMainActivity;
 import com.azeem.ou_app2.RCV2.SingleItemDetails;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,13 +38,14 @@ import org.parceler.Parcels;
 import java.util.ArrayList;
 import java.util.Collections;
 
-// public class NotesAndReferences extends AppCompatActivity implements RewardedVideoAdListener {
-public class NotesAndReferences extends AppCompatActivity{
+public class NotesAndReferences extends AppCompatActivity implements RewardedVideoAdListener {
+
+    //public class NotesAndReferences extends AppCompatActivity{
 
     LinearLayout notesBtn, prepBtn;
     private ArrayList<SingleItemDetails> my_notes_list;
     ProgressBar progressBar;
-    // private RewardedVideoAd mRewardedVideoad;
+    private RewardedVideoAd mRewardedVideoad;
     Parcelable parcelable;
 
 
@@ -48,13 +54,10 @@ public class NotesAndReferences extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.notes_and_references_dashboard);
 
-        /*
 
         mRewardedVideoad = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoad.setRewardedVideoAdListener(this);
         loadRewardedVideoAd();
-
-         */
 
         progressBar = findViewById(R.id.progressbar);
         notesBtn = findViewById(R.id.notesBtn);
@@ -74,15 +77,18 @@ public class NotesAndReferences extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                /*
+
                 if(mRewardedVideoad.isLoaded()){
                     mRewardedVideoad.show();
                 }
-                 */
+
+                /*
 
                 Intent intent = new Intent(NotesAndReferences.this, RecyclerMainActivity.class);
                 intent.putExtra("listToDisplay", parcelable);
                 startActivity(intent);
+
+                 */
 
             }
         });
@@ -151,10 +157,9 @@ public class NotesAndReferences extends AppCompatActivity{
 
     }
 
-    /*
 
     private void loadRewardedVideoAd(){
-        mRewardedVideoad.loadAd("ca-app-pub-9640740685338831/1619038237",
+        mRewardedVideoad.loadAd("ca-app-pub-3940256099942544/5224354917",
                 new AdRequest.Builder().build());
     }
 
@@ -185,11 +190,7 @@ public class NotesAndReferences extends AppCompatActivity{
 
     @Override
     public void onRewarded(RewardItem rewardItem) {
-        Intent intent = new Intent(NotesAndReferences.this, RecyclerMainActivity.class);
-        intent.putExtra("listToDisplay", parcelable);
-        intent.putExtra("isAdShown",1);
-        startActivity(intent);
-        loadRewardedVideoAd();
+
     }
 
     @Override
@@ -204,12 +205,12 @@ public class NotesAndReferences extends AppCompatActivity{
 
     @Override
     public void onRewardedVideoCompleted() {
+        Intent intent = new Intent(NotesAndReferences.this, RecyclerMainActivity.class);
+        intent.putExtra("listToDisplay", parcelable);
+        intent.putExtra("isAdShown",1);
+        startActivity(intent);
+        loadRewardedVideoAd();
     }
-
-    */
-
-
-    /*
 
     @Override
     public void onBackPressed() {
@@ -218,6 +219,5 @@ public class NotesAndReferences extends AppCompatActivity{
         startActivity(intent);
     }
 
-     */
 }
 

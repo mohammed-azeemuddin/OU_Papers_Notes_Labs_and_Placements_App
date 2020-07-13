@@ -19,7 +19,15 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.azeem.ou_app2.MainScreen.NotesAndReferences;
 import com.azeem.ou_app2.R;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import org.parceler.Parcels;
 
@@ -36,9 +44,9 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
     List<SingleItemDetails> moviesList;
     List<String> moviesTitleList;
 
-    // private InterstitialAd interstitial;
+    private InterstitialAd interstitial;
 
-    // private AdView mAdView;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +58,7 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
         text.setSpan(new ForegroundColorSpan(Color.WHITE), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         getSupportActionBar().setTitle(text);
 
-        /*
+
 
         // for initializing ad and requesting ad
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -82,7 +90,7 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
             }
         });
 
-        */
+
 
         // retrieve last position on start
 
@@ -164,7 +172,6 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
     }
 
 
-    /*
 
     @Override
     public void onBackPressed() {
@@ -175,17 +182,9 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
         if (val == 1) {
             Intent intent = new Intent(this, NotesAndReferences.class);
             startActivity(intent);
-        } else {
-            // Make rand
-            Random rnd = new Random();
-
-            int randomNumber = rnd.nextInt(1);
-            if (randomNumber == 0) {
-                // Go to Show Interstitial Ad
-                showInterstitialAd();
-            }
         }
     }
+
 
     // Show Interstitial Ad
     private void showInterstitialAd()
@@ -202,8 +201,6 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
         AdRequest adRequest = new AdRequest.Builder().build();
         interstitial.loadAd(adRequest);
     }
-
-     */
 
 
 }

@@ -97,7 +97,7 @@ android {
         annotationProcessor 'org.parceler:parceler:1.1.12'
 
         // Admob ----------- uncomment this too
-        // implementation 'com.google.android.gms:play-services-ads:19.1.0'
+        implementation 'com.google.android.gms:play-services-ads:19.2.0'
 
         implementation 'com.google.android.material:material:1.0.0'
 

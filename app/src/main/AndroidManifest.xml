@@ -37,22 +37,17 @@
         <activity
             android:name=".MySplashScreen.SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
-
         </activity>
         <activity android:name=".RCV3.VideoRecyclerMainActivity" />
         <activity android:name=".MainScreen.VideoTutorials" /> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
-        <!--
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9640740685338831~1331764634" />
-        -->
         <activity android:name=".MainScreen.ContactDeveloper" />
         <activity android:name=".MainScreen.myTempActivity2" />
         <activity android:name=".MainScreen.myTempActivity" />
@@ -64,13 +59,7 @@
         <activity
             android:name=".RCV2.VideoPopUpWindow"
             android:theme="@style/AppTheme.CustomPopUpTheme" />
-        <activity android:name=".MainScreen.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainScreen.MainActivity"/>
         <activity
             android:name=".RCV2.RecyclerMainActivity"
             android:label=""

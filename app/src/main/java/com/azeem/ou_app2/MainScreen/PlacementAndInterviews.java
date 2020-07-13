@@ -1,10 +1,14 @@
 package com.azeem.ou_app2.MainScreen;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -18,6 +22,11 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.azeem.ou_app2.R;
 import com.azeem.ou_app2.RCV2.SingleItemDetails;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +38,8 @@ import java.util.Collections;
 
 public class PlacementAndInterviews extends AppCompatActivity {
 
+    private AdView mAdView;
+
     ArrayList<DashModel> dashModelArrayList;
     private RecyclerView recyclerView;
     DashAdapter dashAdapter;
@@ -37,6 +48,22 @@ public class PlacementAndInterviews extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_placement_and_interviews);
+
+        if(!isOnline())
+            Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
+
+        // for initializing ad and requesting ad
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+
+        mAdView = findViewById(R.id.adView32);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         recyclerView = findViewById(R.id.rv1);
 
         dashModelArrayList = new ArrayList<>();
@@ -81,5 +108,15 @@ public class PlacementAndInterviews extends AppCompatActivity {
         dashAdapter = new DashAdapter(dashModelArrayList,PlacementAndInterviews.this);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(dashAdapter);
+    }
+
+    private boolean isOnline() {
+        ConnectivityManager conMgr = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = conMgr.getActiveNetworkInfo();
+
+        if(netInfo == null || !netInfo.isConnected() || !netInfo.isAvailable()){
+            return false;
+        }
+        return true;
     }
 }

@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/courses_hat"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/my_notification2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Click here to Unlock/View \n Jobs and Internships"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:textAllCaps="false"
         android:textStyle="italic"
         android:background="@drawable/curved_style"
@@ -53,7 +53,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:textStyle="italic"
         android:textSize="20dp"
         android:text="Jobs/Internships will be displayed\n after the ad"
