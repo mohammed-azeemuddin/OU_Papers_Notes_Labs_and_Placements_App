@@ -106,6 +106,7 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
         intent2.addCategory(Intent.CATEGORY_BROWSABLE);
         intent2.setData(Uri.parse("https://ouallinone.netlify.app/placements.html"));
         startActivity(intent2);
+        mRewardedVideoad.destroy(getApplicationContext());
     }
 
     @Override
@@ -120,8 +121,8 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
 
     @Override
     public void onRewardedVideoCompleted() {
-        mRewardedVideoad.destroy(getApplicationContext());
         Intent intent = new Intent(this,PlacementAndInterviews.class);
+        intent.putExtra("back",1);
         startActivity(intent);
     }
 }

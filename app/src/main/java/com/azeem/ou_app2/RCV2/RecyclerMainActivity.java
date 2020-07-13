@@ -44,7 +44,7 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
     List<SingleItemDetails> moviesList;
     List<String> moviesTitleList;
 
-    private InterstitialAd interstitial;
+    // private InterstitialAd interstitial;
 
     private AdView mAdView;
 
@@ -73,7 +73,7 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-
+        /*
         interstitial = new InterstitialAd(this);
         interstitial.setAdUnitId("ca-app-pub-9640740685338831/8727980871");
         loadinterstitial();
@@ -90,6 +90,8 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
             }
         });
 
+
+         */
 
 
         // retrieve last position on start
@@ -186,6 +188,8 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
     }
 
 
+    /*
+
     // Show Interstitial Ad
     private void showInterstitialAd()
     {
@@ -201,6 +205,8 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
         AdRequest adRequest = new AdRequest.Builder().build();
         interstitial.loadAd(adRequest);
     }
+
+     */
 
 
 }

@@ -104,11 +104,11 @@ public class CoursesMainActivity extends AppCompatActivity implements RewardedVi
         intent2.addCategory(Intent.CATEGORY_BROWSABLE);
         intent2.setData(Uri.parse("https://ouallinone.netlify.app/courses.html"));
         startActivity(intent2);
+        mRewardedVideoad.destroy(getApplicationContext());
     }
 
     @Override
     public void onRewardedVideoAdLeftApplication() {
-
     }
 
     @Override
@@ -118,10 +118,9 @@ public class CoursesMainActivity extends AppCompatActivity implements RewardedVi
 
     @Override
     public void onRewardedVideoCompleted() {
-        mRewardedVideoad.destroy(getApplicationContext());
         Intent intent = new Intent(this,PlacementAndInterviews.class);
+        intent.putExtra("back",1);
         startActivity(intent);
     }
-
 
 }
