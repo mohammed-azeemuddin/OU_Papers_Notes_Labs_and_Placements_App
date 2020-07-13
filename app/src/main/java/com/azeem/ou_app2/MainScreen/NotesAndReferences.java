@@ -159,7 +159,7 @@ public class NotesAndReferences extends AppCompatActivity implements RewardedVid
 
 
     private void loadRewardedVideoAd(){
-        mRewardedVideoad.loadAd("ca-app-pub-3940256099942544/5224354917",
+        mRewardedVideoad.loadAd("ca-app-pub-9640740685338831/5365212098",
                 new AdRequest.Builder().build());
     }
 

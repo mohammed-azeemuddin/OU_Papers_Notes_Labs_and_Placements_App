@@ -26,14 +26,11 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
     TextView infoTextView2;
     Button clickHereBtn2;
     private RewardedVideoAd mRewardedVideoad;
-    boolean isAdShown;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jobs_and_internships_main);
-        isAdShown=false;
 
         mRewardedVideoad = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoad.setRewardedVideoAdListener(this);
@@ -62,7 +59,7 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
     }
 
     private void loadRewardedVideoAd() {
-        mRewardedVideoad.loadAd("ca-app-pub-3940256099942544/5224354917",
+        mRewardedVideoad.loadAd("ca-app-pub-9640740685338831/1050740172",
                 new AdRequest.Builder().build());
     }
 
