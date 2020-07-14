@@ -17,11 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.azeem.ou_app2.MainScreen.NotesAndReferences;
 import com.azeem.ou_app2.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import org.parceler.Parcels;
 
@@ -39,7 +34,7 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
 
     // private InterstitialAd interstitial;
 
-    private AdView mAdView;
+    // private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +47,7 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
         getSupportActionBar().setTitle(text);
 
 
+        /*
 
         // for initializing ad and requesting ad
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -65,6 +61,9 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
         mAdView = findViewById(R.id.adView2);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+
+         */
 
         /*
         interstitial = new InterstitialAd(this);

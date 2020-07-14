@@ -45,9 +45,12 @@
         <activity android:name=".RCV3.VideoRecyclerMainActivity" />
         <activity android:name=".MainScreen.VideoTutorials" /> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
 
+        <!--
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9640740685338831~1331764634" />
+         -->
+
         <activity android:name=".MainScreen.ContactDeveloper" />
         <activity android:name=".MainScreen.myTempActivity2" />
         <activity android:name=".MainScreen.myTempActivity" />

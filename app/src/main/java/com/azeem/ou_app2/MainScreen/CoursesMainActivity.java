@@ -14,18 +14,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.azeem.ou_app2.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.reward.RewardItem;
-import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
-public class CoursesMainActivity extends AppCompatActivity implements RewardedVideoAdListener {
+// public class CoursesMainActivity extends AppCompatActivity implements RewardedVideoAdListener {
+public class CoursesMainActivity extends AppCompatActivity {
 
     String info;
     TextView infoTextView;
     Button clickHereBtn;
-    private RewardedVideoAd mRewardedVideoad;
+    // private RewardedVideoAd mRewardedVideoad;
 
 
     @Override
@@ -33,9 +29,11 @@ public class CoursesMainActivity extends AppCompatActivity implements RewardedVi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_courses_main);
 
+        /*
         mRewardedVideoad = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoad.setRewardedVideoAdListener(this);
         loadRewardedVideoAd();
+         */
 
         if(!isOnline())
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
@@ -51,18 +49,30 @@ public class CoursesMainActivity extends AppCompatActivity implements RewardedVi
             @Override
             public void onClick(View v) {
 
+                /*
                 if(mRewardedVideoad.isLoaded()){
                     mRewardedVideoad.show();
                 }
+                 */
+
+                Intent intent2 = new Intent();
+                intent2.setAction(Intent.ACTION_VIEW);
+                intent2.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent2.setData(Uri.parse("https://ouallinone.netlify.app/courses.html"));
+                startActivity(intent2);
+
+
             }
         });
 
     }
 
+    /*
     private void loadRewardedVideoAd() {
         mRewardedVideoad.loadAd("ca-app-pub-9640740685338831/1050740172",
                 new AdRequest.Builder().build());
     }
+     */
 
     private boolean isOnline() {
         ConnectivityManager conMgr = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -74,6 +84,7 @@ public class CoursesMainActivity extends AppCompatActivity implements RewardedVi
         return true;
     }
 
+    /*
     @Override
     public void onRewardedVideoAdLoaded() {
 
@@ -116,5 +127,7 @@ public class CoursesMainActivity extends AppCompatActivity implements RewardedVi
     public void onRewardedVideoCompleted() {
 
     }
+
+     */
 
 }

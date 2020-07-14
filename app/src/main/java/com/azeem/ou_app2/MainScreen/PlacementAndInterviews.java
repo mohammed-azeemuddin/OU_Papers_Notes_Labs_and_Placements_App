@@ -1,45 +1,22 @@
 package com.azeem.ou_app2.MainScreen;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.util.Log;
-import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
 import com.azeem.ou_app2.R;
-import com.azeem.ou_app2.RCV2.SingleItemDetails;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.parceler.Parcels;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class PlacementAndInterviews extends AppCompatActivity {
 
-    private AdView mAdView;
+    // private AdView mAdView;
 
     ArrayList<DashModel> dashModelArrayList;
     private RecyclerView recyclerView;
@@ -54,6 +31,7 @@ public class PlacementAndInterviews extends AppCompatActivity {
         if(!isOnline())
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
 
+        /*
         // for initializing ad and requesting ad
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -65,6 +43,8 @@ public class PlacementAndInterviews extends AppCompatActivity {
         mAdView = findViewById(R.id.adView32);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+         */
 
         recyclerView = findViewById(R.id.rv1);
 

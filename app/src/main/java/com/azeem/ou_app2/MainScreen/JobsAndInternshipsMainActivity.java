@@ -14,27 +14,27 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.azeem.ou_app2.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.reward.RewardItem;
-import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
-public class JobsAndInternshipsMainActivity extends AppCompatActivity implements RewardedVideoAdListener {
+// public class JobsAndInternshipsMainActivity extends AppCompatActivity implements RewardedVideoAdListener {
+public class JobsAndInternshipsMainActivity extends AppCompatActivity{
 
     String info;
     TextView infoTextView2;
     Button clickHereBtn2;
-    private RewardedVideoAd mRewardedVideoad;
+    // private RewardedVideoAd mRewardedVideoad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jobs_and_internships_main);
 
+        /*
+
         mRewardedVideoad = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoad.setRewardedVideoAdListener(this);
         loadRewardedVideoAd();
+
+         */
 
         if(!isOnline())
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
@@ -50,18 +50,28 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
 
+                /*
                 if(mRewardedVideoad.isLoaded()) {
                     mRewardedVideoad.show();
                 }
+                 */
+                Intent intent2=new Intent();
+                intent2.setAction(Intent.ACTION_VIEW);
+                intent2.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent2.setData(Uri.parse("https://ouallinone.netlify.app/placements.html"));
+                startActivity(intent2);
+
             }
         });
 
     }
 
+    /*
     private void loadRewardedVideoAd() {
         mRewardedVideoad.loadAd("ca-app-pub-9640740685338831/1050740172",
                 new AdRequest.Builder().build());
     }
+    */
 
     private boolean isOnline() {
         ConnectivityManager conMgr = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -73,6 +83,7 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
         return true;
     }
 
+    /*
     @Override
     public void onRewardedVideoAdLoaded() {
 
@@ -93,13 +104,11 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
             loadRewardedVideoAd();
     }
 
+
+
     @Override
     public void onRewarded(RewardItem rewardItem) {
-        Intent intent2=new Intent();
-        intent2.setAction(Intent.ACTION_VIEW);
-        intent2.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent2.setData(Uri.parse("https://ouallinone.netlify.app/placements.html"));
-        startActivity(intent2);
+
     }
 
     @Override
@@ -116,4 +125,6 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity implements
     public void onRewardedVideoCompleted() {
 
     }
+
+     */
 }
