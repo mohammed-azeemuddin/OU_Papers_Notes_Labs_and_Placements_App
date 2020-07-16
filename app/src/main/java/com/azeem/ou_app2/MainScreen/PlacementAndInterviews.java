@@ -73,8 +73,8 @@ public class PlacementAndInterviews extends AppCompatActivity {
                 R.drawable.tech_mcqs,
                 R.drawable.interview_ques,
                 R.drawable.comp_courses,
-                R.drawable.my_notification,
-                R.drawable.my_notification2
+                R.drawable.free_paid_courses,
+                R.drawable.jobs_and_internships
                 };
 
         for(int count = 0 ; count < heads.length ; count++)
