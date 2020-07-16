@@ -14,6 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.azeem.ou_app2.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 // public class JobsAndInternshipsMainActivity extends AppCompatActivity implements RewardedVideoAdListener {
 public class JobsAndInternshipsMainActivity extends AppCompatActivity{
@@ -22,6 +27,8 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity{
     TextView infoTextView2;
     Button clickHereBtn2;
     // private RewardedVideoAd mRewardedVideoad;
+    private AdView mAdView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +42,18 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity{
         loadRewardedVideoAd();
 
          */
+
+        // for initializing ad and requesting ad
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+
+        mAdView = findViewById(R.id.adView4);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         if(!isOnline())
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
