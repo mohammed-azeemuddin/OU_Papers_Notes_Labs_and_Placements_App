@@ -38,13 +38,13 @@ android {
         applicationId "com.azeem.ou_app2"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 7
-        versionName "6.0.1"
+        versionCode 9
+        versionName "6.0.3"
         // signingConfig signingConfigs.config
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
-                onesignal_app_id               : '7b6550cd-3f1a-4b33-b58c-6139e0dcece2',
+                onesignal_app_id               : 'e697ff03-3f96-4ac4-beea-675c3503a265',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]
