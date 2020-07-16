@@ -11,12 +11,17 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.azeem.ou_app2.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import java.util.ArrayList;
 
 public class PlacementAndInterviews extends AppCompatActivity {
 
-    // private AdView mAdView;
+    private AdView mAdView;
 
     ArrayList<DashModel> dashModelArrayList;
     private RecyclerView recyclerView;
@@ -31,7 +36,7 @@ public class PlacementAndInterviews extends AppCompatActivity {
         if(!isOnline())
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
 
-        /*
+
         // for initializing ad and requesting ad
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -43,8 +48,6 @@ public class PlacementAndInterviews extends AppCompatActivity {
         mAdView = findViewById(R.id.adView32);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-         */
 
         recyclerView = findViewById(R.id.rv1);
 
