@@ -18,15 +18,17 @@ buildscript {
 
 android {
 
-
+    /*
     signingConfigs {
         config {
             keyAlias 'hamed'
-            keyPassword 'ABC1998AZEEMa1!'
+            keyPassword ''
             storeFile file('C:\\Users\\MJCET\\AndroidStudioProjects\\signature_ou.jks')
-            storePassword 'ABC1998AZEEMa1!'
+            storePassword ''
         }
     }
+
+     */
 
 
 
@@ -40,7 +42,7 @@ android {
         targetSdkVersion 29
         versionCode 9
         versionName "6.0.3"
-        signingConfig signingConfigs.config
+        // signingConfig signingConfigs.config
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
