@@ -11,6 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.azeem.ou_app2.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +23,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
-    // private AdView mAdView;
+    private AdView mAdView;
 
     ViewPager viewPager;
     Adapter adapter;
@@ -35,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
 
 
-        /*
 
         // for initializing ad and requesting ad
 
@@ -49,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-        */
 
 
 
