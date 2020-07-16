@@ -19,6 +19,7 @@ buildscript {
 android {
 
     /*
+
     signingConfigs {
         config {
             keyAlias 'hamed'
@@ -29,6 +30,8 @@ android {
     }
 
      */
+
+
 
 
 
