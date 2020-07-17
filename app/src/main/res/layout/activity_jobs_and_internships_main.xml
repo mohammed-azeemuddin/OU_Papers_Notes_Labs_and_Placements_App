@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,17 +8,15 @@
     tools:context=".MainScreen.JobsAndInternshipsMainActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:id="@+id/title"
+        android:layout_centerHorizontal="true"
         android:text="Jobs and Internships"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        android:layout_marginTop="24dp"></TextView>
 
     <ImageView
         android:id="@+id/courses_hat"
@@ -26,10 +24,8 @@
         android:layout_height="80dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/jobs_and_internships"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title"/>
 
     <Button
         android:id="@+id/click_here_btn2"
@@ -41,26 +37,23 @@
         android:textAllCaps="false"
         android:textStyle="italic"
         android:background="@drawable/curved_style"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf ="@id/courses_hat" />
+        android:layout_below="@id/courses_hat"
+        android:layout_centerHorizontal="true"
+        />
 
     <TextView
         android:id="@+id/infoTextView2"
         android:layout_width="wrap_content"
+        android:layout_below="@id/click_here_btn2"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="309dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         android:padding="10dp"
         android:text="Apply for jobs and internships(paid/unpaid)"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/adView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/click_here_btn2" />
+        android:textStyle="italic" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView4"
@@ -68,10 +61,10 @@
         android:layout_height="wrap_content"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3530664673183420/9659518620"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        >
+    </com.google.android.gms.ads.AdView>
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
