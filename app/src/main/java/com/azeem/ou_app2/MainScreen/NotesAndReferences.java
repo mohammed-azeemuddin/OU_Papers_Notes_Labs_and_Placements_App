@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +25,18 @@ import com.android.volley.toolbox.Volley;
 import com.azeem.ou_app2.R;
 import com.azeem.ou_app2.RCV2.RecyclerMainActivity;
 import com.azeem.ou_app2.RCV2.SingleItemDetails;
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdCallback;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,16 +46,24 @@ import org.parceler.Parcels;
 import java.util.ArrayList;
 import java.util.Collections;
 
-// public class NotesAndReferences extends AppCompatActivity implements RewardedVideoAdListener {
+//public class NotesAndReferences extends AppCompatActivity implements RewardedVideoAdListener {
 
 public class NotesAndReferences extends AppCompatActivity{
 
+    private String GameId = "4017549";
+    private boolean testMode = true;
+    private String interstitialAdPlacement = "Interstitial_Android";
+
     LinearLayout notesBtn, prepBtn;
     private ArrayList<SingleItemDetails> my_notes_list;
+
     ProgressBar progressBar;
     // private RewardedVideoAd mRewardedVideoad;
+    // private RewardedAd rewardedAd;
     Parcelable parcelable;
 
+//    boolean hasClosed =false;
+//    boolean adShown = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,6 +75,16 @@ public class NotesAndReferences extends AppCompatActivity{
         mRewardedVideoad.setRewardedVideoAdListener(this);
         loadRewardedVideoAd();
          */
+
+//        MobileAds.initialize(this, new OnInitializationCompleteListener()
+//        {
+//            @Override
+//            public void onInitializationComplete(InitializationStatus initializationStatus)
+//            {
+//
+//            }
+//        });
+//        onRequestAd();
 
         progressBar = findViewById(R.id.progressbar);
         notesBtn = findViewById(R.id.notesBtn);
@@ -73,15 +104,27 @@ public class NotesAndReferences extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                /*
-                if(mRewardedVideoad.isLoaded()){
-                    mRewardedVideoad.show();
-                }
-                 */
+//                onShowRewardAd();
+//                Intent intent = new Intent(NotesAndReferences.this, RecyclerMainActivity.class);
+//                intent.putExtra("listToDisplay", parcelable);
+//                startActivity(intent);
+//                return;
 
+                /*
+                if(mRewardedVideoad.isLoaded()) {
+                    mRewardedVideoad.show();
+                    adShown=true;
+                }
+                else {
+                    showToast("Ad is loading please wait..");
+                }
+
+                if(adShown && !hasClosed){
                 Intent intent = new Intent(NotesAndReferences.this, RecyclerMainActivity.class);
                 intent.putExtra("listToDisplay", parcelable);
                 startActivity(intent);
+                }
+                 */
 
             }
         });
@@ -95,6 +138,60 @@ public class NotesAndReferences extends AppCompatActivity{
         });
 
     }
+
+//    private void onShowRewardAd() {
+//        if(!rewardedAd.isLoaded()) return;
+//        //can check show dialog...
+//        //rewardedAd.getRewardItem().getAmount()
+//        RewardedAdCallback adCallback =new RewardedAdCallback()
+//        {
+//
+//            @Override
+//            public void onRewardedAdOpened()
+//            {
+//                super.onRewardedAdOpened();
+//            }
+//
+//            @Override
+//            public void onRewardedAdClosed()
+//            {
+//                super.onRewardedAdClosed();
+//                onRequestAd();
+//            }
+//
+//            @Override
+//            public void onUserEarnedReward(@NonNull com.google.android.gms.ads.rewarded.RewardItem rewardItem) {
+//
+//            }
+//
+//            @Override
+//            public void onRewardedAdFailedToShow(AdError adError)
+//            {
+//                super.onRewardedAdFailedToShow(adError);
+//            }
+//        };
+//        rewardedAd.show(NotesAndReferences.this, adCallback);
+//    }
+//
+//    private void onRequestAd() {
+//        rewardedAd = new RewardedAd(this,"ca-app-pub-3940256099942544/5224354917");
+//        RewardedAdLoadCallback adLoadCallback =new RewardedAdLoadCallback(){
+//            @Override
+//            public void onRewardedAdLoaded()
+//            {
+//                super.onRewardedAdLoaded();
+//                Toast.makeText(NotesAndReferences.this, "onRewardedAdLoaded", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onRewardedAdFailedToLoad(LoadAdError loadAdError)
+//            {
+//                super.onRewardedAdFailedToLoad(loadAdError);
+//                //onRequestAd();
+//            }
+//        };
+//        rewardedAd.loadAd(new AdRequest.Builder().build(), adLoadCallback);
+//    }
 
     public void populate_notes_list() {
 
@@ -152,7 +249,9 @@ public class NotesAndReferences extends AppCompatActivity{
 
     /*
     private void loadRewardedVideoAd(){
-        mRewardedVideoad.loadAd("ca-app-pub-9640740685338831/5365212098",
+        // test ad - ca-app-pub-3940256099942544/5224354917
+        // real ad - ca-app-pub-3530664673183420/9675366811
+        mRewardedVideoad.loadAd("ca-app-pub-3940256099942544/5224354917",
                 new AdRequest.Builder().build());
     }
 
@@ -174,9 +273,7 @@ public class NotesAndReferences extends AppCompatActivity{
     @Override
     public void onRewardedVideoAdClosed() {
 
-        Toast.makeText(this,"You couldn't unlock the Notes Section",
-                Toast.LENGTH_LONG)
-                .show();
+        hasClosed=true;
         loadRewardedVideoAd();
 
     }
@@ -205,6 +302,8 @@ public class NotesAndReferences extends AppCompatActivity{
         loadRewardedVideoAd();
     }
 
+     */
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -212,7 +311,6 @@ public class NotesAndReferences extends AppCompatActivity{
         startActivity(intent);
     }
 
-     */
 
 }
 

@@ -1,2 +1,3 @@
+include ':unity-ads'
 rootProject.name='OU_App2'
 include ':app'

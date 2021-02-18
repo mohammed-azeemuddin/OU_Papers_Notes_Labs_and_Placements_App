@@ -17,6 +17,7 @@
         android:foregroundGravity="center">
     </androidx.viewpager.widget.ViewPager>
 
+    <!--
     <com.google.android.gms.ads.AdView
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/adView"
@@ -26,7 +27,15 @@
     android:layout_alignParentBottom="true"
     ads:adSize="BANNER"
     ads:adUnitId="ca-app-pub-3530664673183420/9053191574">
-    </com.google.android.gms.ads.AdView>
+    </com.google.android.gms.ads.AdView>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:id="@+id/bannerAdLayout"
+        android:orientation="horizontal">
+    </LinearLayout>
 
 
 </RelativeLayout>
