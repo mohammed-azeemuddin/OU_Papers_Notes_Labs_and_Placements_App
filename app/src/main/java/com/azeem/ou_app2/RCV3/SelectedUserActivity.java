@@ -19,6 +19,7 @@ public class SelectedUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selected_user);
 
+        tvSelectedUserName = findViewById(R.id.tvSelectedUserName);
         intent = getIntent();
 
         if(intent!=null){
