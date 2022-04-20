@@ -128,6 +128,7 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
         getMenuInflater().inflate(R.menu.main_menu, menu);
         MenuItem menuItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -140,7 +141,8 @@ public class RecyclerMainActivity extends AppCompatActivity implements RecyclerA
                 return false;
             }
         });
-        return super.onCreateOptionsMenu(menu);
+        //return super.onCreateOptionsMenu(menu);
+        return true;
     }
 
     @Override

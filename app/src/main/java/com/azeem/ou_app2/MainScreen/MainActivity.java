@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
 //    private AdView mAdView;
 
-    private String GameId = "4017549";
-    private boolean testMode = true;
-    private String bannerAdPlacement = "Banner_Android";
+//    private String GameId = "4017549";
+//    private boolean testMode = true;
+//    private String bannerAdPlacement = "Banner_Android";
 
     ViewPager viewPager;
     Adapter adapter;
@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         models.add(new Model(R.drawable.interview2, "Placements and Interviews", "Helpful material,quizzes and company-specific interview questions for placements."));
         models.add(new Model(R.drawable.developer, "Contact Developer", ""));
         models.add(new Model(R.drawable.privacy_policy, "Privacy Policy", ""));
+        models.add(new Model(R.drawable.books, "RCV3 test", ""));
 
         adapter = new Adapter(models, this);
 

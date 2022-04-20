@@ -29,6 +29,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private OnNoteListener mOnNoteListener;
     List<String> moviesTitleList;
     List<String> moviesTitleListAll;
+
+
     ViewHolder viewHolder;
 
     public RecyclerAdapter(List<String> moviesTitleList, OnNoteListener onNoteListener) {

@@ -17,8 +17,6 @@
     <color name="dark_dev">#1F2833</color>
     <color name="my_blue">#557A95</color>
     <color name="logo_colour">#2980EA</color>
-
-
-
+    <color name="black">#000000</color>
 
 </resources>

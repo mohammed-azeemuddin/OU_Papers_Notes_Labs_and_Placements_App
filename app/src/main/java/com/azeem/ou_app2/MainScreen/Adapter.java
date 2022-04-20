@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.azeem.ou_app2.R;
+import com.azeem.ou_app2.RCV3.MainActivity;
 
 import java.util.List;
 
@@ -78,6 +79,9 @@ public class Adapter extends PagerAdapter
                         break;
                     case 5:
                         c= PrivacyPolicy.class;
+                        break;
+                    case 6:
+                        c = MainActivity.class;
                         break;
                 }
 

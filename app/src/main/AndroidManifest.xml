@@ -18,10 +18,15 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".RCV3.SelectedUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RCV3.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainScreen.TestFirebase"
             android:exported="false"
-            android:noHistory="true"
-            />
+            android:noHistory="true" />
         <activity android:name=".MainScreen.JobsAndInternshipsMainActivity" />
 
         <meta-data
@@ -69,8 +74,6 @@
         <activity android:name=".MainScreen.LabsAndViva" />
         <activity android:name=".MainScreen.PreviousQuestionPapers" />
         <activity android:name=".MainScreen.NotesAndReferences" />
-        <activity android:name=".MainScreen.PreviousQuestionPapers2" />
-
     </application>
 
 </manifest>
