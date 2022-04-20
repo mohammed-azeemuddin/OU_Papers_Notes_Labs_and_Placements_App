@@ -16,7 +16,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Choose Year"
+        android:text=""
         android:textColor="#FFF"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/gifImageView3"
@@ -94,49 +94,10 @@
 "                       android:layout_marginBottom="14dp"
                         android:layout_marginLeft="14dp"
                         android:layout_marginRight="14dp"
-                        android:text="Lab Manuals , Records and Viva"
+                        android:text="Lab Manuals ,\n Records and Viva"
                         android:textAlignment="center"
                         android:textColor="#FFF"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <!--second box in the view-->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:id="@+id/videoTutsBtn"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="18dp"
-                    android:background="@drawable/bg_green"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="1dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="14dp
-"                       android:layout_marginBottom="14dp"
-                        android:layout_marginLeft="14dp"
-                        android:layout_marginRight="14dp"
-                        android:text="Video Tutorials for Labs"
-                        android:textAlignment="center"
-                        android:textColor="#FFF"
-                        android:textSize="22sp" />
+                        android:textSize="24sp" />
 
                 </LinearLayout>
             </LinearLayout>

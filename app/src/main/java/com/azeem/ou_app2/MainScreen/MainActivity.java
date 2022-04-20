@@ -19,10 +19,6 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.unity3d.ads.IUnityAdsListener;
-import com.unity3d.ads.UnityAds;
-import com.unity3d.services.banners.IUnityBannerListener;
-import com.unity3d.services.banners.UnityBanners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,78 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
         if(!isOnline())
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
-
-        UnityAds.initialize(MainActivity.this,GameId,testMode);
-        IUnityAdsListener unityAdsListener = new IUnityAdsListener() {
-            @Override
-            public void onUnityAdsReady(String s) {
-                Toast.makeText(MainActivity.this,"Inter ready",Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onUnityAdsStart(String s) {
-                Toast.makeText(MainActivity.this,"Inter start",Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onUnityAdsFinish(String s, UnityAds.FinishState finishState) {
-                Toast.makeText(MainActivity.this,"Inter finish",Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onUnityAdsError(UnityAds.UnityAdsError unityAdsError, String s) {
-                Toast.makeText(MainActivity.this,unityAdsError.toString(),Toast.LENGTH_SHORT).show();
-            }
-        };
-
-        UnityAds.setListener(unityAdsListener);
-        IUnityBannerListener iUnityBannerListener = new IUnityBannerListener() {
-
-            @Override
-            public void onUnityBannerLoaded(String s, View view) {
-                ((ViewGroup)findViewById(R.id.bannerAdLayout)).removeView(view);
-                ((ViewGroup)findViewById(R.id.bannerAdLayout)).addView(view);
-            }
-
-            @Override
-            public void onUnityBannerUnloaded(String s) {
-
-            }
-
-            @Override
-            public void onUnityBannerShow(String s) {
-
-            }
-
-            @Override
-            public void onUnityBannerClick(String s) {
-
-            }
-
-            @Override
-            public void onUnityBannerHide(String s) {
-
-            }
-
-            @Override
-            public void onUnityBannerError(String s) {
-
-            }
-        };
-        
-        UnityBanners.setBannerListener(iUnityBannerListener);
-
-        if (UnityAds.isInitialized()){
-        UnityBanners.loadBanner(MainActivity.this,this.bannerAdPlacement);
-        }else{
-            final Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    UnityBanners.loadBanner(MainActivity.this,bannerAdPlacement);
-                }
-            },5000);
-        }
 
         // for initializing ad and requesting ad
 
@@ -174,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
                 getResources().getColor(R.color.color3),
                 getResources().getColor(R.color.color4),
                 getResources().getColor(R.color.color5),
-                getResources().getColor(R.color.color6)
+                getResources().getColor(R.color.color6),
+                getResources().getColor(R.color.color1)
         };
 
         colors = colors_temp;

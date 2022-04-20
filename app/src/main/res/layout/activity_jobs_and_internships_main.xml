@@ -12,47 +12,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
         android:text="Jobs and Internships"
         android:textColor="@color/white"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"></TextView>
+        android:textStyle="bold"></TextView>
 
     <ImageView
         android:id="@+id/courses_hat"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/jobs_and_internships"
+        android:layout_below="@id/title"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/title"/>
+        android:layout_marginTop="24dp"
+        android:src="@drawable/jobs_and_internships" />
 
     <Button
         android:id="@+id/click_here_btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Click here to view \n Jobs and Internships"
-        android:textSize="15dp"
-        android:textAllCaps="false"
-        android:textStyle="italic"
-        android:background="@drawable/curved_style"
         android:layout_below="@id/courses_hat"
         android:layout_centerHorizontal="true"
-        />
-
-    <TextView
-        android:id="@+id/infoTextView2"
-        android:layout_width="wrap_content"
-        android:layout_below="@id/click_here_btn2"
-        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        android:padding="10dp"
-        android:text="Apply for jobs and internships(paid/unpaid)"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20dp"
+        android:background="@drawable/curved_style"
+        android:textAllCaps="false"
+        android:textSize="15dp"
         android:textStyle="italic" />
 
     <com.google.android.gms.ads.AdView

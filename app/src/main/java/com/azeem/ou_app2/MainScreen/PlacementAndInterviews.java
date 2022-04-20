@@ -57,8 +57,6 @@ public class PlacementAndInterviews extends AppCompatActivity {
                 "Aptitude and Reasoning",
                 "Technical MCQs (C,C++,Java,Python)",
                 "Interview Questions and Preparation",
-                "Company Specific Courses",
-                "Free/Paid courses",
                 "Jobs and Internships"
                 };
 
@@ -66,8 +64,6 @@ public class PlacementAndInterviews extends AppCompatActivity {
                 "Tests and Video Tutorials",
                 "Tests and Video Tutorials",
                 "Important questions asked in interviews and efficient ways of cracking interviews",
-                "Courses tailored for company specific questions in tests and aptitude",
-                "Best online courses for improving your skills",
                 "Updates on Jobs and internships"
                 };
 
@@ -75,8 +71,6 @@ public class PlacementAndInterviews extends AppCompatActivity {
                 R.drawable.find_jobs,
                 R.drawable.tech_mcqs,
                 R.drawable.interview_ques,
-                R.drawable.comp_courses,
-                R.drawable.free_paid_courses,
                 R.drawable.jobs_and_internships
                 };
 

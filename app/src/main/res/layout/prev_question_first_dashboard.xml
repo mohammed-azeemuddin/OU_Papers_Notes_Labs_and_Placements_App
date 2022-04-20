@@ -16,7 +16,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Choose Branch"
+        android:text="Previous Question Papers"
         android:textColor="#FFF"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/gifImageView2"
@@ -27,7 +27,7 @@
 
     <!--GIF IMAGE-->
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView2"
+        android:id="@+id/gifImageView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -65,6 +65,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/engg_btn"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -91,7 +92,7 @@
                         android:layout_marginTop="-10dp"
                         android:layout_marginRight="14dp"
                         android:layout_marginBottom="14dp"
-                        android:text="SEM -I"
+                        android:text="Engineering"
                         android:textAlignment="center"
                         android:textColor="#FFF"
                         android:textSize="23sp" />
@@ -109,6 +110,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/pharm_btn"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="18dp"
@@ -130,53 +132,13 @@
                         android:layout_marginTop="-10dp"
                         android:layout_marginRight="14dp"
                         android:layout_marginBottom="14dp"
-                        android:text="IT"
+                        android:text="Pharmacy"
                         android:textAlignment="center"
                         android:textColor="#FFF"
                         android:textSize="24sp" />
 
                 </LinearLayout>
             </LinearLayout>
-
-            <!--third box in the view-->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="18dp"
-                    android:background="@drawable/bg_green"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp" />
-
-                    <TextView
-                        android:id="@+id/branch_cse"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="14dp"
-                        android:layout_marginTop="-10dp"
-                        android:layout_marginRight="14dp"
-                        android:layout_marginBottom="14dp"
-                        android:text="CSE"
-                        android:textAlignment="center"
-                        android:textColor="#FFF"
-                        android:textSize="24sp" />
-
-                </LinearLayout>
-            </LinearLayout>
-
 
 
         </LinearLayout>
@@ -201,6 +163,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/bba_btn"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="18dp"
@@ -222,7 +185,7 @@
                         android:layout_marginTop="-10dp"
                         android:layout_marginRight="14dp"
                         android:layout_marginBottom="14dp"
-                        android:text="ECE"
+                        android:text="BBA"
                         android:textAlignment="center"
                         android:textColor="#FFF"
                         android:textSize="24sp" />
@@ -240,6 +203,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/law_btn"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="18dp"
@@ -261,53 +225,13 @@
                         android:layout_marginTop="-10dp"
                         android:layout_marginRight="14dp"
                         android:layout_marginBottom="14dp"
-                        android:text="MECH"
+                        android:text="Law"
                         android:textAlignment="center"
                         android:textColor="#FFF"
                         android:textSize="22sp" />
 
                 </LinearLayout>
             </LinearLayout>
-
-            <!--third box in the view-->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="18dp"
-                    android:background="@drawable/bg_green"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp" />
-
-                    <TextView
-                        android:id="@+id/branch_civil"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="14dp"
-                        android:layout_marginTop="-10dp"
-                        android:layout_marginRight="14dp"
-                        android:layout_marginBottom="14dp"
-                        android:text="CIVIL"
-                        android:textAlignment="center"
-                        android:textColor="#FFF"
-                        android:textSize="24sp" />
-
-                </LinearLayout>
-            </LinearLayout>
-
 
 
         </LinearLayout>
@@ -332,6 +256,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/other_btn"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="18dp"
@@ -353,85 +278,7 @@
                         android:layout_marginTop="-10dp"
                         android:layout_marginRight="14dp"
                         android:layout_marginBottom="14dp"
-                        android:text="PROD"
-                        android:textAlignment="center"
-                        android:textColor="#FFF"
-                        android:textSize="24sp" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <!--second box in the view-->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="18dp"
-                    android:background="@drawable/bg_green"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp" />
-
-                    <TextView
-                        android:id="@+id/branch_eee"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="14dp"
-                        android:layout_marginTop="-10dp"
-                        android:layout_marginRight="14dp"
-                        android:layout_marginBottom="14dp"
-                        android:text="EEE"
-                        android:textAlignment="center"
-                        android:textColor="#FFF"
-                        android:textSize="24sp" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <!--third box in the view-->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="18dp"
-                    android:background="@drawable/bg_green"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp" />
-
-                    <TextView
-                        android:id="@+id/branch_eie"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="14dp"
-                        android:layout_marginTop="-10dp"
-                        android:layout_marginRight="14dp"
-                        android:layout_marginBottom="14dp"
-                        android:text="EIE"
+                        android:text="Other Streams"
                         android:textAlignment="center"
                         android:textColor="#FFF"
                         android:textSize="24sp" />

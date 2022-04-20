@@ -61,13 +61,7 @@ public class DashAdapter extends RecyclerView.Adapter<DashAdapter.ViewHolder> {
                     case 2: c= InterviewQuestions.class;
                             break;
 
-                    case 3: c= myTempActivity.class;
-                            break;
-
-                    case 4: c= CoursesMainActivity.class;
-                            break;
-
-                    case 5: c= JobsAndInternshipsMainActivity.class;
+                    case 3: c= JobsAndInternshipsMainActivity.class;
                             break;
                 }
                 Intent intent = new Intent(context,c);

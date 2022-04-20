@@ -53,8 +53,8 @@ public class AptitudePractice extends AppCompatActivity {
         aptitude_hindi_videos_list = new ArrayList<>();
 
         String APTI_URL = "http://www.json-generator.com/api/json/get/bPvsNchRIO?indent=2";
-        String APTI_VIDEO_ENG_URL = "http://www.json-generator.com/api/json/get/ceeiZawCRe?indent=2";
-        String APTI_VIDEO_HINDI_URL = "http://www.json-generator.com/api/json/get/ceGMPQqwBK?indent=2";
+        String APTI_VIDEO_ENG_URL = "https://firebasestorage.googleapis.com/v0/b/ou-all-in-one-83b53.appspot.com/o/apti_english.json?alt=media&token=6329b6c9-d78a-419b-a699-217d39ce7dd7";
+        String APTI_VIDEO_HINDI_URL = "https://firebasestorage.googleapis.com/v0/b/ou-all-in-one-83b53.appspot.com/o/apti_english.json?alt=media&token=6329b6c9-d78a-419b-a699-217d39ce7dd7";
 
         populate_apti_list(APTI_URL);
         populate_apti_video_eng_list(APTI_VIDEO_ENG_URL);

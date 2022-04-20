@@ -6,56 +6,31 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
 import com.azeem.ou_app2.R;
 import com.azeem.ou_app2.RCV2.RecyclerMainActivity;
 import com.azeem.ou_app2.RCV2.SingleItemDetails;
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.ads.reward.RewardItem;
-import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
-import com.google.android.gms.ads.rewarded.RewardedAd;
-import com.google.android.gms.ads.rewarded.RewardedAdCallback;
-import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.parceler.Parcels;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 //public class NotesAndReferences extends AppCompatActivity implements RewardedVideoAdListener {
 
 public class NotesAndReferences extends AppCompatActivity{
 
-    private String GameId = "4017549";
-    private boolean testMode = true;
-    private String interstitialAdPlacement = "Interstitial_Android";
+//    private String GameId = "4017549";
+//    private boolean testMode = true;
+//    private String interstitialAdPlacement = "Interstitial_Android";
 
-    LinearLayout notesBtn, prepBtn;
-    private ArrayList<SingleItemDetails> my_notes_list;
+    LinearLayout engg_btn,pharm_btn,bba_btn,law_btn,other_btn;
 
     ProgressBar progressBar;
     // private RewardedVideoAd mRewardedVideoad;
@@ -65,10 +40,25 @@ public class NotesAndReferences extends AppCompatActivity{
 //    boolean hasClosed =false;
 //    boolean adShown = false;
 
+    String enggCollection,pharmCollection,bbaCollection,lawCollection,otherCollection;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.notes_and_references_dashboard);
+
+        engg_btn = findViewById(R.id.engg_btn);
+        pharm_btn = findViewById(R.id.pharm_btn);
+        bba_btn = findViewById(R.id.bba_btn);
+        law_btn = findViewById(R.id.law_btn);
+        other_btn = findViewById(R.id.other_btn);
+
+        enggCollection = "engineering_notes";
+        pharmCollection = "pharmacy_notes";
+        bbaCollection = "bba_notes";
+        lawCollection = "law_notes";
+        otherCollection = "other_notes";
+
 
         /*
         mRewardedVideoad = MobileAds.getRewardedVideoAdInstance(this);
@@ -87,20 +77,12 @@ public class NotesAndReferences extends AppCompatActivity{
 //        onRequestAd();
 
         progressBar = findViewById(R.id.progressbar);
-        notesBtn = findViewById(R.id.notesBtn);
-        prepBtn = findViewById(R.id.prepBtn);
-        my_notes_list = new ArrayList<>();
 
         if (!isOnline())
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
 
-        populate_notes_list();
 
-        Collections.sort(my_notes_list);
-        parcelable = Parcels.wrap(my_notes_list);
-
-
-        notesBtn.setOnClickListener(new View.OnClickListener() {
+        engg_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -126,14 +108,81 @@ public class NotesAndReferences extends AppCompatActivity{
                 }
                  */
 
+                parcelable = Parcels.wrap(enggCollection);
+                Intent intent = new Intent(NotesAndReferences.this,TestFirebase.class);
+                intent.putExtra("collectionName", parcelable);
+                startActivity(intent);
+
             }
         });
 
-        prepBtn.setOnClickListener(new View.OnClickListener() {
+        pharm_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NotesAndReferences.this, myTempActivity2.class);
+
+//                onShowRewardAd();
+//                Intent intent = new Intent(NotesAndReferences.this, RecyclerMainActivity.class);
+//                intent.putExtra("listToDisplay", parcelable);
+//                startActivity(intent);
+//                return;
+
+                /*
+                if(mRewardedVideoad.isLoaded()) {
+                    mRewardedVideoad.show();
+                    adShown=true;
+                }
+                else {
+                    showToast("Ad is loading please wait..");
+                }
+
+                if(adShown && !hasClosed){
+                Intent intent = new Intent(NotesAndReferences.this, RecyclerMainActivity.class);
+                intent.putExtra("listToDisplay", parcelable);
                 startActivity(intent);
+                }
+                 */
+
+                parcelable = Parcels.wrap(pharmCollection);
+                Intent intent = new Intent(NotesAndReferences.this,TestFirebase.class);
+                intent.putExtra("collectionName", parcelable);
+                startActivity(intent);
+
+            }
+        });
+
+        bba_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                parcelable = Parcels.wrap(bbaCollection);
+                Intent intent = new Intent(NotesAndReferences.this,TestFirebase.class);
+                intent.putExtra("collectionName", parcelable);
+                startActivity(intent);
+
+            }
+        });
+
+        law_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                parcelable = Parcels.wrap(lawCollection);
+                Intent intent = new Intent(NotesAndReferences.this,TestFirebase.class);
+                intent.putExtra("collectionName", parcelable);
+                startActivity(intent);
+
+            }
+        });
+
+        other_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                parcelable = Parcels.wrap(otherCollection);
+                Intent intent = new Intent(NotesAndReferences.this, RecyclerMainActivity.class);
+                intent.putExtra("collectionName", parcelable);
+                startActivity(intent);
+
             }
         });
 
@@ -193,47 +242,6 @@ public class NotesAndReferences extends AppCompatActivity{
 //        rewardedAd.loadAd(new AdRequest.Builder().build(), adLoadCallback);
 //    }
 
-    public void populate_notes_list() {
-
-        //String JSON_URL = "http://www.json-generator.com/api/json/get/cpAjEilrnm?indent=2";
-
-        String JSON_URL = "http://www.json-generator.com/api/json/get/ceQynCuimq?indent=2";
-        RequestQueue queue = Volley.newRequestQueue(this);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, JSON_URL, null, new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-                for (int i = 0; i < response.length(); i++) {
-                    try {
-                        //JSONObject songObject = response.getJSONObject(i);
-                        JSONObject movieObject = response.getJSONObject(i);
-
-                        SingleItemDetails mov = new SingleItemDetails();
-                        mov.setTitle(movieObject.getString("title"));
-                        mov.setUrlForDownload(movieObject.getString("urlForDownload"));
-                        my_notes_list.add(mov);
-                        progressBar.setVisibility(View.VISIBLE);
-
-                        if (i == response.length() - 1)
-                            Collections.sort(my_notes_list);
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    } finally {
-                        progressBar.setVisibility(View.INVISIBLE);
-                    }
-                }
-            }
-
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d("tag", "onErrorResponse: " + error.getMessage());
-            }
-        });
-
-        queue.add(jsonArrayRequest);
-
-    }
 
     public boolean isOnline() {
 

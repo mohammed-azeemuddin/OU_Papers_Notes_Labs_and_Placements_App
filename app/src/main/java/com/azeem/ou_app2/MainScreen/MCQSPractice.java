@@ -50,8 +50,8 @@ public class MCQSPractice extends AppCompatActivity {
         mcq_list = new ArrayList<>();
         mcq_videos_list = new ArrayList<>();
 
-        String MCQ_URL = "http://www.json-generator.com/api/json/get/bVFuCipMMO?indent=2";
-        String MCQ_VIDEOS_URL= "http://www.json-generator.com/api/json/get/cqhdUoWtAi?indent=2";
+        String MCQ_URL = "https://firebasestorage.googleapis.com/v0/b/ou-all-in-one-83b53.appspot.com/o/ccppjavamcqs.json?alt=media&token=41ebe254-7707-4e8f-b5f6-d334efd71e11";
+        String MCQ_VIDEOS_URL= "https://firebasestorage.googleapis.com/v0/b/ou-all-in-one-83b53.appspot.com/o/ccppjavamcqs.json?alt=media&token=41ebe254-7707-4e8f-b5f6-d334efd71e11";
 
         populate_mcqs_list(MCQ_URL);
         populate_mcqs_videos_list(MCQ_VIDEOS_URL);

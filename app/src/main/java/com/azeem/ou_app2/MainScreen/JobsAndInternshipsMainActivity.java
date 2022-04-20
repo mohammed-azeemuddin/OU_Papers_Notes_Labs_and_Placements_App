@@ -24,7 +24,6 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 public class JobsAndInternshipsMainActivity extends AppCompatActivity{
 
     String info;
-    TextView infoTextView2;
     Button clickHereBtn2;
     // private RewardedVideoAd mRewardedVideoad;
     private AdView mAdView;
@@ -59,11 +58,10 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity{
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
 
         info = getIntent().getStringExtra("info");
-        infoTextView2 = findViewById(R.id.infoTextView2);
         clickHereBtn2 = findViewById(R.id.click_here_btn2);
 
-        if(info!=null)
-            infoTextView2.setText(info);
+        clickHereBtn2.setText("Join our Telegram Channel for daily job updates");
+
 
         clickHereBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +75,7 @@ public class JobsAndInternshipsMainActivity extends AppCompatActivity{
                 Intent intent2=new Intent();
                 intent2.setAction(Intent.ACTION_VIEW);
                 intent2.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent2.setData(Uri.parse("https://ouallinone.netlify.app/placements.html"));
+                intent2.setData(Uri.parse("https://t.me/ouallinone"));
                 startActivity(intent2);
 
             }
