@@ -23,6 +23,8 @@ import com.android.volley.toolbox.Volley;
 import com.azeem.ou_app2.R;
 import com.azeem.ou_app2.RCV2.RecyclerMainActivity;
 import com.azeem.ou_app2.RCV2.SingleItemDetails;
+import com.azeem.ou_app2.RCV3.MainActivity;
+import com.azeem.ou_app2.RCV3.UserModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,13 +33,14 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class AptitudePractice extends AppCompatActivity {
 
     ListView listView;
     private ArrayList<String> arrayList;
     ArrayAdapter arrayAdapter;
-    ArrayList<SingleItemDetails> aptitude_practice_list , aptitude_eng_videos_list , aptitude_hindi_videos_list ;
+    ArrayList<UserModel> aptitude_practice_list , aptitude_eng_videos_list , aptitude_hindi_videos_list ;
     private ProgressBar progressBar3;
 
     @Override
@@ -60,8 +63,6 @@ public class AptitudePractice extends AppCompatActivity {
         populate_apti_video_eng_list(APTI_VIDEO_ENG_URL);
         populate_apti_video_hindi_list(APTI_VIDEO_HINDI_URL);
 
-
-        Collections.sort(aptitude_practice_list);
 
         final Parcelable parcelable = Parcels.wrap(aptitude_practice_list);
         final Parcelable parcelable2 = Parcels.wrap(aptitude_eng_videos_list);
@@ -92,19 +93,19 @@ public class AptitudePractice extends AppCompatActivity {
                     startActivity(intent2);
                 }
                 if(position==1) {
-                    Intent intent = new Intent(AptitudePractice.this, RecyclerMainActivity.class);
+                    Intent intent = new Intent(AptitudePractice.this, MainActivity.class);
                     intent.putExtra("listToDisplay", parcelable);
                     intent.putExtra("isVideo",100);
                     startActivity(intent);
                 }
                 if(position==2){
-                    Intent intent = new Intent(AptitudePractice.this, RecyclerMainActivity.class);
+                    Intent intent = new Intent(AptitudePractice.this, MainActivity.class);
                     intent.putExtra("listToDisplay", parcelable2);
                     intent.putExtra("isVideo",1);
                     startActivity(intent);
                 }
                 if(position==3){
-                    Intent intent = new Intent(AptitudePractice.this, RecyclerMainActivity.class);
+                    Intent intent = new Intent(AptitudePractice.this, MainActivity.class);
                     intent.putExtra("listToDisplay", parcelable3);
                     intent.putExtra("isVideo",1);
                     startActivity(intent);
@@ -123,14 +124,20 @@ public class AptitudePractice extends AppCompatActivity {
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject movieObject = response.getJSONObject(i);
-                        SingleItemDetails mov = new SingleItemDetails();
-                        mov.setTitle(movieObject.getString("title"));
-                        mov.setUrlForDownload(movieObject.getString("urlForDownload"));
-                        aptitude_hindi_videos_list.add(mov);
+                        UserModel userModel = new UserModel();
+                        userModel.setName(movieObject.getString("title"));
+                        userModel.setUrl(movieObject.getString("urlForDownload"));
+
+                        aptitude_hindi_videos_list.add(userModel);
                         progressBar3.setVisibility(View.VISIBLE);
 
                         if (i == response.length() - 1)
-                            Collections.sort(aptitude_hindi_videos_list);
+                            Collections.sort(aptitude_hindi_videos_list, new Comparator<UserModel>() {
+                                @Override
+                                public int compare(UserModel userModel1, UserModel userModel2) {
+                                    return userModel1.getName().compareTo(userModel2.getName());
+                                }
+                            });
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -157,15 +164,23 @@ public class AptitudePractice extends AppCompatActivity {
             public void onResponse(JSONArray response) {
                 for (int i = 0; i < response.length(); i++) {
                     try {
+
                         JSONObject movieObject = response.getJSONObject(i);
-                        SingleItemDetails mov = new SingleItemDetails();
-                        mov.setTitle(movieObject.getString("title"));
-                        mov.setUrlForDownload(movieObject.getString("urlForDownload"));
-                        aptitude_eng_videos_list.add(mov);
+                        UserModel userModel = new UserModel();
+
+                        userModel.setName(movieObject.getString("title"));
+                        userModel.setUrl(movieObject.getString("urlForDownload"));
+
+                        aptitude_eng_videos_list.add(userModel);
                         progressBar3.setVisibility(View.VISIBLE);
 
                         if (i == response.length() - 1)
-                            Collections.sort(aptitude_eng_videos_list);
+                            Collections.sort(aptitude_eng_videos_list, new Comparator<UserModel>() {
+                                @Override
+                                public int compare(UserModel userModel1, UserModel userModel2) {
+                                    return userModel1.getName().compareTo(userModel2.getName());
+                                }
+                            });
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -195,14 +210,19 @@ public class AptitudePractice extends AppCompatActivity {
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject movieObject = response.getJSONObject(i);
-                        SingleItemDetails mov = new SingleItemDetails();
-                        mov.setTitle(movieObject.getString("title"));
-                        mov.setUrlForDownload(movieObject.getString("urlForDownload"));
-                        aptitude_practice_list.add(mov);
+                        UserModel userModel = new UserModel();
+                        userModel.setName(movieObject.getString("title"));
+                        userModel.setUrl(movieObject.getString("urlForDownload"));
+                        aptitude_practice_list.add(userModel);
                         progressBar3.setVisibility(View.VISIBLE);
 
                         if (i == response.length() - 1)
-                            Collections.sort(aptitude_practice_list);
+                            Collections.sort(aptitude_practice_list, new Comparator<UserModel>() {
+                                @Override
+                                public int compare(UserModel userModel1, UserModel userModel2) {
+                                    return userModel1.getName().compareTo(userModel2.getName());
+                                }
+                            });
 
                     } catch (JSONException e) {
                         e.printStackTrace();

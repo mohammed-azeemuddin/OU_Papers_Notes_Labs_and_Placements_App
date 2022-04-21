@@ -14,11 +14,14 @@ import android.widget.Toast;
 import com.azeem.ou_app2.R;
 import com.azeem.ou_app2.RCV2.RecyclerMainActivity;
 import com.azeem.ou_app2.RCV2.SingleItemDetails;
+import com.azeem.ou_app2.RCV3.MainActivity;
+import com.azeem.ou_app2.RCV3.UserModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.auth.User;
 
 import org.parceler.Parcels;
 
@@ -28,8 +31,7 @@ import java.util.List;
 public class TestFirebase extends AppCompatActivity {
 
     FirebaseFirestore db;
-    List<DBItem> datalist;
-    List<SingleItemDetails> finalList;
+    List<UserModel> datalist;
     ProgressDialog progressDialog;
     Parcelable parcelable;
     String collectionName;
@@ -41,7 +43,6 @@ public class TestFirebase extends AppCompatActivity {
         setContentView(R.layout.activity_test_firebase);
 
         datalist = new ArrayList<>();
-        finalList = new ArrayList<>();
         db = FirebaseFirestore.getInstance();
 
         progressDialog = new ProgressDialog(this);
@@ -61,17 +62,15 @@ public class TestFirebase extends AppCompatActivity {
                             List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
                             for(DocumentSnapshot d:list)
                             {
-                                DBItem obj=d.toObject(DBItem.class);
+                                UserModel obj = d.toObject(UserModel.class);
                                 datalist.add(obj);
                             }
-                            for(DBItem item:datalist){
-                                finalList.add(new SingleItemDetails(item.name, item.url));
-                            }
+
                             if(progressDialog.isShowing())
                                 progressDialog.dismiss();
 
-                            parcelable = Parcels.wrap(finalList);
-                            Intent intent = new Intent(TestFirebase.this, RecyclerMainActivity.class);
+                            parcelable = Parcels.wrap(datalist);
+                            Intent intent = new Intent(TestFirebase.this, MainActivity.class);
                             intent.putExtra("listToDisplay", parcelable);
                             startActivity(intent);
                         }

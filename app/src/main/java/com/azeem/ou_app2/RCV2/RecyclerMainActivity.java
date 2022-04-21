@@ -30,7 +30,6 @@ import java.util.List;
 
 public class RecyclerMainActivity extends AppCompatActivity implements RecyclerAdapter.OnNoteListener {
 
-
     RecyclerView recyclerView;
     RecyclerAdapter recyclerAdapter;
 

@@ -46,12 +46,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterVh>
                     String searchStr = constraint.toString().toLowerCase();
                     List<UserModel> userModels = new ArrayList<>();
                     for(UserModel userModel:getUserModelListFilter){
-                        if(userModel.getFirstName().toLowerCase().contains(searchStr)
-                        || userModel.getUserPhone().toLowerCase().contains(searchStr)){
+                        if(userModel.getName().toLowerCase().contains(searchStr)){
                             userModels.add(userModel);
                         }
                     }
-
                     filterResults.values = userModels;
                     filterResults.count = userModels.size();
                 }
@@ -85,15 +83,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterVh>
     public void onBindViewHolder(@NonNull UserAdapter.UserAdapterVh holder, int position) {
 
             UserModel userModel = userModelList.get(position);
-            String firstName = userModel.getFirstName();
-            String lastName = userModel.getLastName();
-            String userPhone = userModel.getUserPhone();
-            String userName = firstName+lastName;
-            String prefix = firstName.charAt(0)+""+lastName.charAt(0);
+            String name = userModel.getName();
+            String url = userModel.getUrl();
 
-            holder.userPhone.setText(userPhone);
-            holder.userName.setText(userName);
-            holder.userPrefix.setText(prefix);
+            holder.userName.setText(name);
+            // holder.userPrefix.setText(prefix);
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -111,14 +105,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterVh>
     public static class UserAdapterVh extends RecyclerView.ViewHolder{
 
         private TextView userName;
-        private TextView userPhone;
-        private TextView userPrefix;
 
         public UserAdapterVh(@NonNull View itemView) {
             super(itemView);
             userName = itemView.findViewById(R.id.tvUserName);
-            userPrefix = itemView.findViewById(R.id.tvPrefix);
-            userPhone = itemView.findViewById(R.id.tvPhoneNumber);
         }
     }
 }

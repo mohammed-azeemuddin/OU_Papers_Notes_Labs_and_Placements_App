@@ -80,9 +80,6 @@ public class Adapter extends PagerAdapter
                     case 5:
                         c= PrivacyPolicy.class;
                         break;
-                    case 6:
-                        c = MainActivity.class;
-                        break;
                 }
 
                 Intent intent = new Intent(context,c);

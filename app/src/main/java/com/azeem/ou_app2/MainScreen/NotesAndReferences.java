@@ -179,7 +179,7 @@ public class NotesAndReferences extends AppCompatActivity{
             public void onClick(View v) {
 
                 parcelable = Parcels.wrap(otherCollection);
-                Intent intent = new Intent(NotesAndReferences.this, RecyclerMainActivity.class);
+                Intent intent = new Intent(NotesAndReferences.this, TestFirebase.class);
                 intent.putExtra("collectionName", parcelable);
                 startActivity(intent);
 

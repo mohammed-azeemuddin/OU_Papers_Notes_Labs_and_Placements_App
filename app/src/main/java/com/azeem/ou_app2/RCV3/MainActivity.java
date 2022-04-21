@@ -3,12 +3,14 @@ package com.azeem.ou_app2.RCV3;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
@@ -17,6 +19,11 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.azeem.ou_app2.R;
+import com.azeem.ou_app2.RCV2.PopUpWindow;
+import com.azeem.ou_app2.RCV2.PracticePopUpWindow;
+import com.azeem.ou_app2.RCV2.VideoPopUpWindow;
+
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.UserC
 
     RecyclerView rvUsers;
     UserAdapter userAdapter;
-    List<UserModel> userModelList = new ArrayList<>();
+    List<UserModel> userModelList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +47,20 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.UserC
         rvUsers = findViewById(R.id.rvUsers);
         setData();
         prepareRecyclerView();
+
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
+        rvUsers.addItemDecoration(dividerItemDecoration);
     }
 
     public void setData(){
-        userModelList.add(new UserModel("Jospehine","Martha","209348213"));
-        userModelList.add(new UserModel("Richard","Larn","2021333"));
-        userModelList.add(new UserModel("Maiko","William","4321551"));
-        userModelList.add(new UserModel("Dennis","Martin","3213212"));
+//        userModelList.add(new UserModel("Jospehine","Martha"));
+//        userModelList.add(new UserModel("Richard","Larn"));
+//        userModelList.add(new UserModel("Maiko","William"));
+//        userModelList.add(new UserModel("Dennis","Martin"));
+        Parcelable parcelable = getIntent().getParcelableExtra("listToDisplay");
+        if(parcelable==null)
+            parcelable = getIntent().getParcelableExtra("videoToDisplay");
+        userModelList = Parcels.unwrap(parcelable);
     }
 
     public void prepareRecyclerView(){
@@ -63,7 +77,27 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.UserC
     @Override
     public void selectedUser(UserModel userModel) {
 //        Toast.makeText(this,"Selected user"+userModel.getFirstName(),Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this,SelectedUserActivity.class).putExtra("data",userModel));
+//        startActivity(new Intent(this,SelectedUserActivity.class).putExtra("data",userModel));
+        String downloadURL = userModel.getUrl();
+        int x= getIntent().getIntExtra("isVideo",0);
+        Intent myintent;
+        if(x==1) {
+            myintent = new Intent(this, VideoPopUpWindow.class);
+            myintent.putExtra("url2", downloadURL);
+            startActivity(myintent);
+        }
+        else if(x==100)
+        {
+            myintent = new Intent(this, PracticePopUpWindow.class);
+            myintent.putExtra("url2", downloadURL);
+            startActivity(myintent);
+        }
+        else if(x==0)
+        {
+            myintent = new Intent(this, PopUpWindow.class);
+            myintent.putExtra("url2", downloadURL);
+            startActivity(myintent);
+        }
     }
 
 

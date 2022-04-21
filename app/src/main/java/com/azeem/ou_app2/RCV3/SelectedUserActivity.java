@@ -24,7 +24,7 @@ public class SelectedUserActivity extends AppCompatActivity {
 
         if(intent!=null){
             userModel = (UserModel) intent.getSerializableExtra("data");
-            String userName = userModel.getFirstName()+" "+userModel.getLastName();
+            String userName = userModel.getName();
             tvSelectedUserName.setText(userName);
         }
         tvSelectedUserName = findViewById(R.id.tvSelectedUserName);

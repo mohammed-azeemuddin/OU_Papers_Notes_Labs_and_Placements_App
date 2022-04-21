@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
         models.add(new Model(R.drawable.interview2, "Placements and Interviews", "Helpful material,quizzes and company-specific interview questions for placements."));
         models.add(new Model(R.drawable.developer, "Contact Developer", ""));
         models.add(new Model(R.drawable.privacy_policy, "Privacy Policy", ""));
-        models.add(new Model(R.drawable.books, "RCV3 test", ""));
 
         adapter = new Adapter(models, this);
 
@@ -100,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
                 getResources().getColor(R.color.color4),
                 getResources().getColor(R.color.color5),
                 getResources().getColor(R.color.color6),
-                getResources().getColor(R.color.color1)
         };
 
         colors = colors_temp;

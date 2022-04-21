@@ -41,7 +41,7 @@ public class PopUpWindow extends AppCompatActivity  {
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {
-                link2=null;
+                link2 = null;
             } else {
                 link2 = extras.getString("url2");
             }
