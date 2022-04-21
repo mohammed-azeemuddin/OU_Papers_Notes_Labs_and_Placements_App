@@ -61,23 +61,25 @@ public class Adapter extends PagerAdapter
             public void onClick(View v) {
                 Class c=null;
                 switch(position){
-
                     case 0:
-                        c = NotesAndReferences.class;
+                        c = VisitWebsite.class;
                         break;
                     case 1:
-                        c = PreviousQuestionPapers.class;
+                        c = NotesAndReferences.class;
                         break;
                     case 2:
-                        c = LabsAndViva.class;
+                        c = PreviousQuestionPapers.class;
                         break;
                     case 3:
-                        c = PlacementAndInterviews.class;
+                        c = LabsAndViva.class;
                         break;
                     case 4:
-                        c= ContactDeveloper.class;
+                        c = PlacementAndInterviews.class;
                         break;
                     case 5:
+                        c= ContactDeveloper.class;
+                        break;
+                    case 6:
                         c= PrivacyPolicy.class;
                         break;
                 }

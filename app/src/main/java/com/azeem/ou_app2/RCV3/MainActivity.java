@@ -22,6 +22,11 @@ import com.azeem.ou_app2.R;
 import com.azeem.ou_app2.RCV2.PopUpWindow;
 import com.azeem.ou_app2.RCV2.PracticePopUpWindow;
 import com.azeem.ou_app2.RCV2.VideoPopUpWindow;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import org.parceler.Parcels;
 
@@ -34,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.UserC
     UserAdapter userAdapter;
     List<UserModel> userModelList;
 
+    private AdView mAdView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +50,17 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.UserC
         Spannable text = new SpannableString(getSupportActionBar().getTitle());
         text.setSpan(new ForegroundColorSpan(Color.WHITE), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         getSupportActionBar().setTitle(text);
+
+        // for initializing ad and requesting ad
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView2);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         rvUsers = findViewById(R.id.rvUsers);
         setData();

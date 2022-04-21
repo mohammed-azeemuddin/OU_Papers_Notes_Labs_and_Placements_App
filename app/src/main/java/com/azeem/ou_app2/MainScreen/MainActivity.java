@@ -25,7 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-//    private AdView mAdView;
+    private AdView mAdView;
 
 //    private String GameId = "4017549";
 //    private boolean testMode = true;
@@ -45,18 +45,18 @@ public class MainActivity extends AppCompatActivity {
         if(!isOnline())
             Toast.makeText(this, "No Internet connection!", Toast.LENGTH_LONG).show();
 
-        // for initializing ad and requesting ad
+//         for initializing ad and requesting ad
 
-//        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-//            @Override
-//            public void onInitializationComplete(InitializationStatus initializationStatus) {
-//            }
-//        });
-//
-//
-//        mAdView = findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
 
 
@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         // list for models
         models = new ArrayList<>();
 
+        models.add(new Model(R.drawable.website_logo,"OU All In One Website","Check out OU All In One Website for updates,contests and much more..."));
         models.add(new Model(R.drawable.books, "Notes and References", "Printed and handwritten notes of various subjects all at one place."));
         models.add(new Model(R.drawable.prev_papers, "Previous Question Papers", "Refer previous year's question papers of different subjects from the oldest to the latest."));
         models.add(new Model(R.drawable.lab_pic, "Labs and Viva", "Lab Manuals and respective Viva-voce for Lab internals and externals."));
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 getResources().getColor(R.color.color4),
                 getResources().getColor(R.color.color5),
                 getResources().getColor(R.color.color6),
+                getResources().getColor(R.color.color1)
         };
 
         colors = colors_temp;

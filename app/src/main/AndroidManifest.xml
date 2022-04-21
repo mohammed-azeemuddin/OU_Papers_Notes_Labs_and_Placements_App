@@ -17,15 +17,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3530664673183420~5059102094"/>
+
+        <activity
+            android:name=".MainScreen.VisitWebsite"
+            android:exported="false" />
         <activity
             android:name=".RCV3.SelectedUserActivity"
             android:exported="false" />
         <activity
             android:name=".RCV3.MainActivity"
             android:exported="false"
-            android:theme="@style/AppThemeForSearch"
-            />
-
+            android:theme="@style/AppThemeForSearch" />
         <activity
             android:name=".MainScreen.TestFirebase"
             android:exported="false"

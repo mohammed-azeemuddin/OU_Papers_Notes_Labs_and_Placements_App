@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "850725617809",
+    "firebase_url": "https://ou-all-in-one-83b53-default-rtdb.firebaseio.com",
+    "project_id": "ou-all-in-one-83b53",
+    "storage_bucket": "ou-all-in-one-83b53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850725617809:android:2bcce3dd30fd8ca4b83f30",
+        "android_client_info": {
+          "package_name": "com.azeem.ou_app2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850725617809-u7vooo680iusr2289ij861i17ra9iu56.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR_E8H1Y6uLRys_j9Saz41kJRf2ZrzpQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850725617809-u7vooo680iusr2289ij861i17ra9iu56.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
