@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/drawable/round_bg.xml" value="0.1" />
+        <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/layout/activity_aptitude_practice.xml" value="0.25" />
         <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/layout/activity_courses_main.xml" value="0.25" />
         <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/layout/activity_jobs_and_internships_main.xml" value="0.25" />
         <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -32,6 +33,7 @@
         <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/layout/row_users.xml" value="0.264" />
         <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/layout/singlerow.xml" value="0.25" />
         <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/layout/user_rwo_item.xml" value="0.264" />
+        <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/layouts/MainScreenXML/mipmap-anydpi-v26/final_app_icon.xml" value="0.191" />
         <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/menu/menu.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/MJCET/Desktop/OU_Papers_Notes_Labs_and_Placements_App/app/src/main/res/xml/searchable.xml" value="0.1" />
       </map>
